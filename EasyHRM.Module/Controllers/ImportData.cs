@@ -1,6 +1,7 @@
 ﻿using DevExpress.Data.Filtering;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Win;
+using DevExpress.ExpressApp.Win.Editors;
 using DevExpress.ExpressApp.Xpo;
 using DevExpress.Xpo;
 using DevExpress.XtraEditors;
@@ -25,6 +26,7 @@ namespace EasyHRM.Module.Controllers
         DataTable dt;
         IObjectSpace objSpace;
         Frame frame;
+        ErrorProvider er = new ErrorProvider();
 
        public ImportData(IObjectSpace obj, Frame frm)
        {            
@@ -33,8 +35,14 @@ namespace EasyHRM.Module.Controllers
             dt.Columns.Add("IsChecked",typeof(bool));
             objSpace = obj;
             layoutControlItem7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            txtTenBangChamCong.Visible = false;
+            layoutControlItem8.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            layoutControlItem9.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            layoutControlItem10.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+
+            lkupTenBangChamCong.Visible = false;
             frame = frm;
+
+            LoadDataLookup();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -44,16 +52,27 @@ namespace EasyHRM.Module.Controllers
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
-            ErrorProvider er = new ErrorProvider();
             er.Clear();
-            if(string.IsNullOrEmpty(txtTenBangChamCong.Text))
+            if(string.IsNullOrEmpty(lkupTenBangChamCong.Text))
             {
-                er.SetError(txtTenBangChamCong, "Bạn chưa nhập tên bảng chấm công!");
+                er.SetError(lkupTenBangChamCong, "Bạn chưa nhập tên bảng chấm công!");
                 return;
             }
             if (gridView1.SelectedRowsCount == 0)
             {
                 XtraMessageBox.Show("Bạn chưa chọn dòng để import!", "THÔNG BÁO");
+                return;
+            }
+
+            if (dtNgayBatDau.EditValue == System.DBNull.Value)
+            {
+                er.SetError(dtNgayBatDau, "Bạn chưa chọn ngày bắt đầu!");
+                return;
+            }
+
+            if (dtNgayKetThuc.EditValue == System.DBNull.Value)
+            {
+                er.SetError(dtNgayKetThuc, "Bạn chưa chọn ngày kết thúc!");
                 return;
             }
            
@@ -131,13 +150,16 @@ namespace EasyHRM.Module.Controllers
                     _chamCong.Date = _date;
                     _chamCong.ThoiGianVao = TimeSpan.Parse(dt.Rows[i]["ThoiGianVao"].ToString());
                     _chamCong.ThoiGianRa = TimeSpan.Parse(dt.Rows[i]["ThoiGianRa"].ToString());
-                    _chamCong.Name = txtTenBangChamCong.Text;
+                    _chamCong.TimekeepingName = (TimekeepingName)lkupTenBangChamCong.EditValue;
                     _chamCong = CalProperties(_chamCong);
                     _chamCong.Save();
                     #endregion
+
+                    objSpace.CommitChanges();
                 }
             }
-            objSpace.CommitChanges();
+
+           
             this.Close();
         }
 
@@ -145,8 +167,11 @@ namespace EasyHRM.Module.Controllers
         {
             if (string.IsNullOrEmpty(txtDuongDanFile.Text))
                 return;
-            txtTenBangChamCong.Visible = true;
+            lkupTenBangChamCong.Visible = true;
             layoutControlItem7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            layoutControlItem8.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            layoutControlItem9.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            layoutControlItem10.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
 
             
             //Convert To Table Template
@@ -462,6 +487,70 @@ namespace EasyHRM.Module.Controllers
 
            return t;
        }
+
+       private void dtNgayBatDau_EditValueChanged(object sender, EventArgs e)
+       {
+           if(dtNgayBatDau.EditValue != System.DBNull.Value)
+           {
+               dtNgayKetThuc.EditValue = dtNgayBatDau.EditValue;
+           }
+       }
+
+       private void dtNgayKetThuc_EditValueChanged(object sender, EventArgs e)
+       {
+           if(dtNgayKetThuc.EditValue != System.DBNull.Value)
+           {
+               TimeSpan ts = dtNgayKetThuc.DateTime - dtNgayBatDau.DateTime;
+               if(ts.TotalSeconds < 0)
+               {
+                   er.Clear();
+                   er.SetError(dtNgayKetThuc, "Ngày kết thúc phải lớn hơn ngày bắt đầu!");
+                   dtNgayKetThuc.EditValue = dtNgayBatDau.EditValue;
+               }
+           }
+       }
+
+       private void btnNew_Click(object sender, EventArgs e)
+       {
+           IObjectSpace aObjectSpace = frame.Application.CreateObjectSpace();
+           TimekeepingName tkn = aObjectSpace.CreateObject<TimekeepingName>();
+           
+           ShowViewParameters svp = new ShowViewParameters();
+           DetailView dv = frame.Application.CreateDetailView(aObjectSpace, tkn);
+           dv.ViewEditMode = DevExpress.ExpressApp.Editors.ViewEditMode.Edit;
+           svp.CreatedView = dv;
+
+
+           svp.TargetWindow = TargetWindow.NewModalWindow;
+           svp.Context = TemplateContext.PopupWindow;
+           svp.CreateAllControllers = true;
+
+           var svs = new ShowViewSource(null, null);
+           frame.Application.ShowViewStrategy.ShowView(svp, svs);
+
+           LoadDataLookup();
+
+       }
+
+      private void LoadDataLookup()
+       {
+           XPQuery<TimekeepingName> _TimekeepingName = new XPQuery<TimekeepingName>((
+                   (XPObjectSpace)objSpace).Session);
+
+           List<TimekeepingName> listTimekeepingName = (from tso in _TimekeepingName select tso).ToList();
+           lkupTenBangChamCong.Properties.DataSource = listTimekeepingName;
+           lkupTenBangChamCong.Properties.DisplayMember = "timekeepingName";
+       }
+
+      private void lkupTenBangChamCong_EditValueChanged(object sender, EventArgs e)
+      {
+          if(lkupTenBangChamCong.EditValue != System.DBNull.Value)
+          {
+              TimekeepingName tkn = (TimekeepingName)lkupTenBangChamCong.EditValue;
+              dtNgayBatDau.EditValue = tkn.StartDate;
+              dtNgayKetThuc.EditValue = tkn.EndDate;
+          }
+      }
 
       
     }

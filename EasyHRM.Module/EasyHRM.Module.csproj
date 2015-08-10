@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessObjects\Branch.cs" />
+    <Compile Include="BusinessObjects\DataTypeTimekeeping.cs" />
     <Compile Include="BusinessObjects\DefaultValueTimekeeping.cs" />
     <Compile Include="BusinessObjects\Department.cs" />
     <Compile Include="BusinessObjects\Employee.cs" />
@@ -168,6 +169,8 @@
     <Compile Include="BusinessObjects\Position.cs" />
     <Compile Include="BusinessObjects\Shift.cs" />
     <Compile Include="BusinessObjects\Timekeeping.cs" />
+    <Compile Include="BusinessObjects\TimekeepingMonth.cs" />
+    <Compile Include="BusinessObjects\TimekeepingName.cs" />
     <Compile Include="Controllers\ImportData.cs">
       <SubType>Form</SubType>
     </Compile>

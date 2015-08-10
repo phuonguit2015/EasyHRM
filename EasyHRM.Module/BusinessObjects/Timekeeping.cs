@@ -37,6 +37,13 @@ namespace EasyHRM.Module.BusinessObjects
             set { SetPropertyValue("Name", ref _timekeepingName, value); }
         }
 
+        [XafDisplayName("Bảng Chấm Công")]
+        public TimekeepingName TimekeepingName
+        {
+            get { return GetPropertyValue<TimekeepingName>("TimekeepingName"); }
+            set { SetPropertyValue<TimekeepingName>("TimekeepingName", value); }
+        }
+
         [XafDisplayName ("Nhân Viên")]
         public Employee Employee
         {

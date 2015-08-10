@@ -15,6 +15,7 @@ using DevExpress.Persistent.Validation;
 namespace EasyHRM.Module.BusinessObjects
 {
     [DefaultClassOptions]
+   
     public class DataTypeTimekeeping : BaseObject
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (http://documentation.devexpress.com/#Xaf/CustomDocument3146).
         public DataTypeTimekeeping(Session session)
@@ -27,14 +28,25 @@ namespace EasyHRM.Module.BusinessObjects
             // Place your initialization code here (http://documentation.devexpress.com/#Xaf/CustomDocument2834).
         }
 
-        private string _dataTypeTimekeepingName;
-
-        [XafDisplayName ("Loại Dữ Liệu Chấm Công")]
-        [Indexed(Unique = true)]
-        public string DataTypeTimekeepingName
+        private string _dataType;
+        [XafDisplayName("Loại Chấm Công")]
+        public string DataType
         {
-            get { return _dataTypeTimekeepingName; }
-            set { SetPropertyValue("DataTypeTimekeepingName", ref _dataTypeTimekeepingName, value); }
+            get { return _dataType; }
+            set { SetPropertyValue("DataType", ref _dataType, value); }
         }
+
+        private KieuDuLieu _type;
+        [XafDisplayName("Kiểu Dữ Liệu")]
+        public KieuDuLieu TypeData
+        {
+            get { return _type; }
+            set { SetPropertyValue("TypeData", ref _type, value); }
+        }
+    }
+
+    public enum KieuDuLieu
+    {
+        Int, String, DateTime, Double, Decimal
     }
 }

@@ -19,4 +19,3 @@ D:\Project\EasyHRM\EasyHRM.Module\bin\Debug\AForge.Video.xml
 D:\Project\EasyHRM\EasyHRM.Module\bin\Debug\Fasterflect.xml
 D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.dll
 D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.pdb
-D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.csprojResolveAssemblyReference.cache
