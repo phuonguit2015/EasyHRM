@@ -148,5 +148,7 @@ namespace EasyHRM.Win {
         private DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule viewVariantsModule;
         private DevExpress.ExpressApp.Workflow.WorkflowModule workflowModule;
         private DevExpress.ExpressApp.Workflow.Win.WorkflowWindowsFormsModule workflowWindowsFormsModule;
+       
+
     }
 }

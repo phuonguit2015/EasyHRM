@@ -28,16 +28,43 @@ namespace EasyHRM.Module.Controllers
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.acImportFromExcel = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
+            this.acFilterByEmployeeCode = new DevExpress.ExpressApp.Actions.ParametrizedAction(this.components);
+            // 
+            // acImportFromExcel
+            // 
+            this.acImportFromExcel.Caption = "Import From Excel";
+            this.acImportFromExcel.ConfirmationMessage = null;
+            this.acImportFromExcel.Id = "ImportFromExcel";
+            this.acImportFromExcel.ImageName = "Action_Expor";
+            this.acImportFromExcel.TargetViewType = DevExpress.ExpressApp.ViewType.ListView;
+            this.acImportFromExcel.ToolTip = null;
+            this.acImportFromExcel.TypeOfView = typeof(DevExpress.ExpressApp.ListView);
+            this.acImportFromExcel.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.ImportFromExcel_Execute);
+            // 
+            // acFilterByEmployeeCode
+            // 
+            this.acFilterByEmployeeCode.Caption = "Filter By Employee Code";
+            this.acFilterByEmployeeCode.ConfirmationMessage = null;
+            this.acFilterByEmployeeCode.Id = "FilterByEmployeeCode";
+            this.acFilterByEmployeeCode.NullValuePrompt = null;
+            this.acFilterByEmployeeCode.ShortCaption = null;
+            this.acFilterByEmployeeCode.ToolTip = null;
+            this.acFilterByEmployeeCode.Execute += new DevExpress.ExpressApp.Actions.ParametrizedActionExecuteEventHandler(this.acFilterByEmployeeCode_Execute);
             // 
             // TimekeepingViewController
             // 
             this.TargetObjectType = typeof(EasyHRM.Module.BusinessObjects.Timekeeping);
-            this.TargetViewType = DevExpress.ExpressApp.ViewType.DetailView;
-            this.TypeOfView = typeof(DevExpress.ExpressApp.DetailView);
+            this.TargetViewType = DevExpress.ExpressApp.ViewType.ListView;
+            this.TypeOfView = typeof(DevExpress.ExpressApp.ListView);
 
         }
 
         #endregion
+
+        private DevExpress.ExpressApp.Actions.SimpleAction acImportFromExcel;
+        private DevExpress.ExpressApp.Actions.ParametrizedAction acFilterByEmployeeCode;
 
     }
 }

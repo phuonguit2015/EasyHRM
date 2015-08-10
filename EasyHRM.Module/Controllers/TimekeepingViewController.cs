@@ -17,6 +17,10 @@ using DevExpress.XtraEditors;
 using System.Windows.Forms;
 using DevExpress.ExpressApp.Model;
 using DevExpress.ExpressApp.Win.Editors;
+using DevExpress.ExpressApp.Win;
+using EasyHRM.Module.BusinessObjects;
+using DevExpress.ExpressApp.Win.Controls;
+using DevExpress.XtraBars;
 
 namespace EasyHRM.Module.Controllers
 {
@@ -33,43 +37,23 @@ namespace EasyHRM.Module.Controllers
         {
             base.OnActivated();
             // Perform various tasks depending on the target View.
-            PropertyEditor propertyEditor = ((DetailView)View).FindItem("DataTypeTimekeeping") as PropertyEditor;
-            if (propertyEditor != null)
-            {
-                if (propertyEditor.Control != null)
-                {
-                    InitNullText(propertyEditor);
-                }
-                else
-                {
-                    propertyEditor.ControlValueChanged += propertyEditor_ControlValueChanged;
-                }
-            }
         }
 
-        void propertyEditor_ControlValueChanged(object sender, EventArgs e)
-        {
-            //PropertyEditor propertyEditor = ((DetailView)View).FindItem("Value") as PropertyEditor;
-            //PropertyEditor newp = new DatePropertyEditor(propertyEditor.GetType(),
-            //    propertyEditor.Model); 
-            ////if (propertyEditor != null)
-            ////{
-            ////    ((DetailView)View).RemoveItem("Value");
-            ////    ((DetailView)View).AddItem(newp);
-              
-            ////}
-            //propertyEditor.ObjectType = 
-        }
-
-        void propertyEditor_ControlCreating(object sender, EventArgs e)
-        {
-            PropertyEditor p = sender as PropertyEditor;
-           
-        }
         protected override void OnViewControlsCreated()
         {
             base.OnViewControlsCreated();
             // Access and customize the target View control.
+
+            IBarManagerHolder bmh = Frame.Template as IBarManagerHolder;
+            if (bmh == null || bmh.BarManager == null) return;
+            foreach (BarItem item in bmh.BarManager.Items)
+            {
+                BarEditItem editItem = item as BarEditItem;
+                if (editItem != null && Convert.ToString(item.Tag).Contains("ID=\"FilterByEmployeeCode\""))
+                {
+                    item.Width = 250;
+                }
+            }
         }
         protected override void OnDeactivated()
         {
@@ -84,6 +68,31 @@ namespace EasyHRM.Module.Controllers
         private void InitNullText(PropertyEditor propertyEditor)
         {
             ((BaseEdit)propertyEditor.Control).Properties.NullText = CaptionHelper.NullValueText;
+        }
+
+        private void ImportFromExcel_Execute(object sender, SimpleActionExecuteEventArgs e)
+        {
+            Form f = new ImportData(View.ObjectSpace, Frame);
+            f.ShowDialog();
+        }
+
+        private void acFilterByEmployeeCode_Execute(object sender, ParametrizedActionExecuteEventArgs e)
+        {
+            string paramValue = e.ParameterCurrentValue as string;
+            if (!string.IsNullOrEmpty(paramValue))
+            {
+                paramValue = "%" + paramValue + "%";
+                if ((View is DevExpress.ExpressApp.ListView) & (View.ObjectTypeInfo.Type == typeof(Timekeeping)))
+                {
+                    ((DevExpress.ExpressApp.ListView)View).CollectionSource.Criteria["Filter1"] = new BinaryOperator(
+                       "Employee.EmployeeCode", paramValue, BinaryOperatorType.Like);
+                }
+            }
+            else
+            {
+                ((DevExpress.ExpressApp.ListView)View).CollectionSource.Criteria.Clear();
+            }
+           
         }
     }
 }

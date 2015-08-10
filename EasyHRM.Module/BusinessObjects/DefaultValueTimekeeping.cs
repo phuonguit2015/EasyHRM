@@ -14,7 +14,8 @@ using DevExpress.Persistent.Validation;
 
 namespace EasyHRM.Module.BusinessObjects
 {
-    [DefaultClassOptions]    public class DefaultValueTimekeeping : BaseObject
+    [DefaultClassOptions]  
+    public class DefaultValueTimekeeping : BaseObject
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (http://documentation.devexpress.com/#Xaf/CustomDocument3146).
         public DefaultValueTimekeeping(Session session)
             : base(session)
@@ -56,14 +57,6 @@ namespace EasyHRM.Module.BusinessObjects
             get { return _tongSoGioLam; }
             set { SetPropertyValue("TongSoGioLam", ref _tongSoGioLam, value); }
         }        
-
-        private int _ngayTinhCong;
-        [XafDisplayName("Ngày Tính Công")]
-        public int NgayTinhCong
-        {
-            get { return _ngayTinhCong; }
-            set { SetPropertyValue("NgayTinhCong", ref _ngayTinhCong, value); }
-        }      
 
     }   
 }

@@ -33,7 +33,7 @@ namespace EasyHRM.Module.Win
             // 
             this.RequiredModuleTypes.Add(typeof(EasyHRM.Module.EasyHRMModule));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule));
-
+           
         }
 
         #endregion

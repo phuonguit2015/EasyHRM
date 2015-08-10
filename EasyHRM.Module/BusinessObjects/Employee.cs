@@ -51,6 +51,7 @@ namespace EasyHRM.Module.BusinessObjects
 
         private string _employeeCode;
         [XafDisplayName("Mã Nhân Viên")]
+        [Indexed (Unique=true)]
         public string EmployeeCode
         {
             get { return _employeeCode; }

@@ -28,16 +28,17 @@ namespace EasyHRM.Module.BusinessObjects
             // Place your initialization code here (http://documentation.devexpress.com/#Xaf/CustomDocument2834).
         }
 
-        private string _shiftCode;
+        //private string _shiftCode;
         private string _shiftName;
         private string _description;
 
-        [XafDisplayName("Mã Ca Làm Việc")]
-        public string ShiftCode
-        {
-            get { return _shiftCode; }
-            set { SetPropertyValue("ShiftCode", ref _shiftCode, value); }
-        }
+        //[XafDisplayName("Mã Ca Làm Việc")]
+        //[DbType("NOT")]
+        //public string ShiftCode
+        //{
+        //    get { return _shiftCode; }
+        //    set { SetPropertyValue("ShiftCode", ref _shiftCode, value); }
+        //}
 
         [XafDisplayName("Tên Ca Làm Việc")]
         public string ShiftName

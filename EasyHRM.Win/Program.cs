@@ -22,6 +22,8 @@ namespace EasyHRM.Win {
             Application.SetCompatibleTextRenderingDefault(false);
             EditModelPermission.AlwaysGranted = System.Diagnostics.Debugger.IsAttached;
             EasyHRMWindowsFormsApplication winApplication = new EasyHRMWindowsFormsApplication();
+            Person.SetFullNameFormat(ConfigurationManager.AppSettings["FullNameFormat"],
+            ConfigurationManager.AppSettings["FullNameFormatPersistentAlias"]);
             // Refer to the http://documentation.devexpress.com/#Xaf/CustomDocument2680 help article for more details on how to provide a custom splash form.
             //winApplication.SplashScreen = new DevExpress.ExpressApp.Win.Utils.DXSplashScreen("YourSplashImage.png");
             if(ConfigurationManager.ConnectionStrings["ConnectionString"] != null) {

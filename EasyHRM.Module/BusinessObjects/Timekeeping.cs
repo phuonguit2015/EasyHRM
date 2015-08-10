@@ -26,8 +26,16 @@ namespace EasyHRM.Module.BusinessObjects
         {
             base.AfterConstruction();
             // Place your initialization code here (http://documentation.devexpress.com/#Xaf/CustomDocument2834).
-        }              
-       
+        }
+
+
+        private string _timekeepingName;
+        [XafDisplayName ("Tên Bảng Chấm Công")]
+        public string Name
+        {
+            get { return _timekeepingName; }
+            set { SetPropertyValue("Name", ref _timekeepingName, value); }
+        }
 
         [XafDisplayName ("Nhân Viên")]
         public Employee Employee
@@ -43,8 +51,11 @@ namespace EasyHRM.Module.BusinessObjects
             set { SetPropertyValue<Shift>("Shift", value); }
         }
 
+      
         private DateTime _date;
         [XafDisplayName("Ngày")]
+        [ModelDefault("DisplayFormat", "{0: dd/MM/yyyy}")]
+        [ModelDefault("EditMask", "dd/MM/yyyy")]
         public DateTime Date
         {
             get { return _date; }

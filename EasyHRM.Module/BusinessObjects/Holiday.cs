@@ -34,6 +34,8 @@ namespace EasyHRM.Module.BusinessObjects
 
 
         [XafDisplayName("Ngày Bắt Đầu")]
+        [ModelDefault("DisplayFormat", "{0: dd/MM/yyyy}")]
+        [ModelDefault("EditMask", "dd/MM/yyyy")]
         public DateTime StartDate
         {
             get { return _startDate; }
@@ -41,6 +43,8 @@ namespace EasyHRM.Module.BusinessObjects
         }
 
         [XafDisplayName("Ngày Kết Thúc")]
+        [ModelDefault("DisplayFormat", "{0: dd/MM/yyyy}")]
+        [ModelDefault("EditMask", "dd/MM/yyyy")]
         public DateTime EndDate
         {
             get { return _endDate; }
