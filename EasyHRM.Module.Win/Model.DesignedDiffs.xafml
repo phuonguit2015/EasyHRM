@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
+  <BOModel>
+    <Class Name="EasyHRM.Module.BusinessObjects.TimekeepingMonth" DefaultDetailView="TimekeepingMonth_DetailView" DefaultLookupListView="TimekeepingMonth_LookupListView" />
+  </BOModel>
   <SchemaModules>
     <SchemaModule Name="CloneObjectModule" Version="14.1.6.0" IsNewNode="True" />
     <SchemaModule Name="SystemModule" Version="14.1.6.0" IsNewNode="True" />

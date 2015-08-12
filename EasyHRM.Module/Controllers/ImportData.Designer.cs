@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportData));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.progressBarControl1 = new DevExpress.XtraEditors.ProgressBarControl();
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.dtNgayKetThuc = new DevExpress.XtraEditors.DateEdit();
             this.dtNgayBatDau = new DevExpress.XtraEditors.DateEdit();
@@ -56,12 +57,12 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.progressBarControl1 = new DevExpress.XtraEditors.ProgressBarControl();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleLabelItem1 = new DevExpress.XtraLayout.SimpleLabelItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayKetThuc.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayKetThuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayBatDau.Properties.CalendarTimeProperties)).BeginInit();
@@ -85,7 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +111,14 @@
             this.layoutControl1.Size = new System.Drawing.Size(767, 452);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // progressBarControl1
+            // 
+            this.progressBarControl1.Location = new System.Drawing.Point(145, 418);
+            this.progressBarControl1.Name = "progressBarControl1";
+            this.progressBarControl1.Size = new System.Drawing.Size(175, 18);
+            this.progressBarControl1.StyleController = this.layoutControl1;
+            this.progressBarControl1.TabIndex = 15;
             // 
             // btnNew
             // 
@@ -444,18 +452,6 @@
             this.layoutControlItem10.TextToControlDistance = 0;
             this.layoutControlItem10.TextVisible = false;
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // progressBarControl1
-            // 
-            this.progressBarControl1.Location = new System.Drawing.Point(145, 418);
-            this.progressBarControl1.Name = "progressBarControl1";
-            this.progressBarControl1.Size = new System.Drawing.Size(175, 18);
-            this.progressBarControl1.StyleController = this.layoutControl1;
-            this.progressBarControl1.TabIndex = 15;
-            // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.progressBarControl1;
@@ -480,6 +476,10 @@
             this.simpleLabelItem1.Text = "LabelsimpleLabelItem1";
             this.simpleLabelItem1.TextSize = new System.Drawing.Size(107, 13);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // ImportData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,6 +492,7 @@
             this.Text = "Import Data From Excel";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayKetThuc.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayKetThuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayBatDau.Properties.CalendarTimeProperties)).EndInit();
@@ -515,7 +516,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).EndInit();
             this.ResumeLayout(false);

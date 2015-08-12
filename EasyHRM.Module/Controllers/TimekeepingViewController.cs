@@ -23,12 +23,16 @@ using DevExpress.ExpressApp.Win.Controls;
 using DevExpress.XtraBars;
 using DevExpress.ExpressApp.Xpo;
 using DevExpress.Xpo;
+using DevExpress.Xpo.DB;
 
 namespace EasyHRM.Module.Controllers
 {
     // For more typical usage scenarios, be sure to check out http://documentation.devexpress.com/#Xaf/clsDevExpressExpressAppViewControllertopic.
     public partial class TimekeepingViewController : ViewController
     {
+        ChoiceActionItem setLookupItem;
+        TimekeepingName tkname = null;
+
         public TimekeepingViewController()
         {
             InitializeComponent();
@@ -39,6 +43,46 @@ namespace EasyHRM.Module.Controllers
         {
             base.OnActivated();
             // Perform various tasks depending on the target View.
+            View.ControlsCreated += new EventHandler(View_ControlsCreated);
+
+            XPQuery<TimekeepingName> _TimekeepingName = new XPQuery<TimekeepingName>((
+                   (XPObjectSpace)ObjectSpace).Session);
+
+            List<TimekeepingName> listTimekeepingName = (from tso in _TimekeepingName select tso).ToList();
+            acFilterByTimekeepingMonth.Items.Clear();
+
+            foreach (TimekeepingName item in listTimekeepingName)
+            {
+                if (item.StartDate <= DateTime.Now && DateTime.Now <= item.EndDate)
+                {
+                    tkname = item;
+                }
+                setLookupItem = new ChoiceActionItem(item.timekeepingName, item);
+
+                acFilterByTimekeepingMonth.Items.Add(setLookupItem);
+            }
+            if (listTimekeepingName != null)
+            {
+                if (tkname == null)
+                {
+                    tkname = listTimekeepingName[0];
+                }
+                ((DevExpress.ExpressApp.ListView)View).CollectionSource.Criteria["Filter1"] = new BinaryOperator(
+                        "TimekeepingName.Oid", tkname.Oid, BinaryOperatorType.Equal);
+            }          
+          
+        }
+
+        private void View_ControlsCreated(object sender, EventArgs e)
+        {
+            GridListEditor editor1 = (GridListEditor)((DevExpress.ExpressApp.ListView)View).Editor;
+            editor1.GridView.OptionsView.ColumnAutoWidth = false;
+            foreach(XafGridColumn col in editor1.GridView.Columns)
+            {
+                col.Width = 80;
+            }
+            editor1.GridView.ColumnPanelRowHeight = 30;
+            editor1.GridView.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
         }
 
         protected override void OnViewControlsCreated()
@@ -56,7 +100,10 @@ namespace EasyHRM.Module.Controllers
                     item.Width = 250;
                 }
             }
+          
         }
+
+      
         protected override void OnDeactivated()
         {
             // Unsubscribe from previously subscribed events and release other references and resources.
@@ -97,6 +144,45 @@ namespace EasyHRM.Module.Controllers
            
         }
 
+        private void CreateNewRowTimekeeping(Session session, string value,
+            Guid loaiDuLieuChamCongOid, Guid tenBangChamCongOid, Guid nhanVienOid, int index, ref List<string> strArr)
+        {
+            string s = string.Format("SELECT * FROM \"TimekeepingMonth\" WHERE" +
+                    "\"TimekeepingName\" = '{0}' AND \"Employee\" = '{1}' AND \"DataTypeTimekeeping\" = '{2}'",
+                tenBangChamCongOid, nhanVienOid, loaiDuLieuChamCongOid);
+            SelectedData data = session.ExecuteQuery(s);
+            //if(session.FindObject<TimekeepingMonth>(CriteriaOperator.And(new BinaryOperator("TimekeepingName.Oid", tenBangChamCongOid),
+            //    new BinaryOperator("Employee.Oid",nhanVienOid), new BinaryOperator("DataTypeTimekeeping.Oid",loaiDuLieuChamCongOid))) == null)
+            if(data.ResultSet[0].Rows.Length == 0)
+            {
+                session.BeginTransaction();
+                Guid id = Guid.NewGuid();
+                while (true)
+                {
+                    try
+                    {
+
+                        s = string.Format("INSERT INTO \"TimekeepingMonth\" (\"Oid\",\"TimekeepingName\", \"Employee\", \"DataTypeTimekeeping\", \"Ngay" + index.ToString() + "\")" +
+                        "VALUES ('{4}','{0}','{1}','{2}','{3}')", tenBangChamCongOid, nhanVienOid, loaiDuLieuChamCongOid, value, id);
+                        session.ExecuteNonQuery(s);
+                        break;
+                    }
+                    catch
+                    {
+                        id = Guid.NewGuid();
+                    }
+                }
+                session.CommitTransaction();
+            }
+            else
+            {
+                strArr.Add(string.Format("UPDATE \"TimekeepingMonth\" SET \"Ngay" + index.ToString() + "\" = '{3}', \"OptimisticLockField\" = null, \"GCRecord\" = null WHERE" +
+                    "\"TimekeepingName\" = '{0}' AND \"Employee\" = '{1}' AND \"DataTypeTimekeeping\" = '{2}'",
+                tenBangChamCongOid, nhanVienOid, loaiDuLieuChamCongOid, value));                
+            }
+         
+        }
+
         private void ImportToTimekeepingMonth_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
             // Khởi tạo giá trị dữ liệu chấm công
@@ -119,11 +205,11 @@ namespace EasyHRM.Module.Controllers
             }        
 
         
-            
+            //((XPObjectSpace)ObjectSpace).Session.ExecuteQuery()
             // 
-            XPQuery<Timekeeping> _Timekeeping = new XPQuery<Timekeeping>((
-                   (XPObjectSpace)ObjectSpace).Session);
-            IEnumerable<Timekeeping> timekeeping = (from tso in _Timekeeping select tso).ToList();
+            //XPQuery<Timekeeping> _Timekeeping = new XPQuery<Timekeeping>((
+            //       (XPObjectSpace)ObjectSpace).Session);
+            //IEnumerable<Timekeeping> timekeeping = (from tso in _Timekeeping select tso).ToList();
             int j = 0;
             Timekeeping tempNote = null;
             DataTypeTimekeeping thoiGianRa = null;
@@ -138,156 +224,74 @@ namespace EasyHRM.Module.Controllers
             DataTypeTimekeeping soGioTangCaNN = null;
             DataTypeTimekeeping soGioTangCaNNCaDem = null;
             DataTypeTimekeeping soGioTangCaNL = null;
-            UnitOfWork session = new UnitOfWork(((XPObjectSpace)ObjectSpace).Session.DataLayer);
-            foreach (Timekeeping note in timekeeping)
+            Session session = ((XPObjectSpace)ObjectSpace).Session;
+            thoiGianRa = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Thời Gian Ra"));
+            thoiGianVao = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Thời Gian Vào"));
+            soPhutDiTre = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Phút Đi Trể"));
+            soPhutVeSom = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Phút Về Sớm"));
+            tongThoiGianLam = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Tổng Số Giờ Làm"));
+            ngayTinhCong = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Ngày Tính Công"));
+            ngayCongThucTe = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Ngày Công Thực Tế"));
+            soGioTangCaNT = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Giờ Tăng Ca NT"));
+            soGioTangCaNTCaDem = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Giờ Tăng Ca NT Ca Đêm"));
+            soGioTangCaNN = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Giờ Tăng Ca NN"));
+            soGioTangCaNNCaDem = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Giờ Tăng Ca NN Ca Đêm"));
+            soGioTangCaNL = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Giờ Tăng Ca NL"));
+           
+            List<string> strArr = new List<string>();
+            
+            foreach (Timekeeping note in ((DevExpress.ExpressApp.ListView)View).CollectionSource.List)
             {
 
-
-                if (j % 100 == 0)
-                {
-                    session.CommitChanges();
-                    session.Dispose();
-                    session = new UnitOfWork(((XPObjectSpace)ObjectSpace).Session.DataLayer);
-                    tempNote = session.FindObject<Timekeeping>(new BinaryOperator("Oid", note.Oid));
-
-                    thoiGianRa = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Thời Gian Ra"));
-                    thoiGianVao = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Thời Gian Vào"));
-                    soPhutDiTre = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Phút Đi Trể"));
-                    soPhutVeSom = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Phút Về Sớm"));
-                    tongThoiGianLam = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Tổng Số Giờ Làm"));
-                    ngayTinhCong = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Ngày Tính Công"));
-                    ngayCongThucTe = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Ngày Công Thực Tế"));
-                    soGioTangCaNT = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Giờ Tăng Ca NT"));
-                    soGioTangCaNTCaDem = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Giờ Tăng Ca NT Ca Đêm"));
-                    soGioTangCaNN = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Giờ Tăng Ca NN"));
-                    soGioTangCaNNCaDem = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Giờ Tăng Ca NN Ca Đêm"));
-                    soGioTangCaNL = session.FindObject<DataTypeTimekeeping>(new BinaryOperator("DataType", "Số Giờ Tăng Ca NL"));
-                }
+                tempNote = note;
+                
                 j++;
 
                 // Lấy ngày bắt đầu của tháng
                 TimekeepingName tn = session.FindObject<TimekeepingName>(new BinaryOperator("timekeepingName", tempNote.TimekeepingName.timekeepingName));
                 TimeSpan ts = tempNote.Date - tn.StartDate;
                 int index = ts.Days + 1;
+                
+                CreateNewRowTimekeeping(session, tempNote.ThoiGianVao.ToString("HH:mm"), thoiGianVao.Oid, tempNote.TimekeepingName.Oid,
+                    tempNote.Employee.Oid, index, ref strArr);
+                CreateNewRowTimekeeping(session, tempNote.ThoiGianRa.ToString("HH:mm"), thoiGianRa.Oid, tempNote.TimekeepingName.Oid,
+                   tempNote.Employee.Oid, index, ref strArr);
+                CreateNewRowTimekeeping(session, tempNote.SoGioTangCaNL.ToString(), soGioTangCaNL.Oid, tempNote.TimekeepingName.Oid,
+                   tempNote.Employee.Oid, index, ref strArr);
+                CreateNewRowTimekeeping(session, tempNote.SoGioTangCaNN.ToString(), soGioTangCaNN.Oid, tempNote.TimekeepingName.Oid,
+                   tempNote.Employee.Oid, index, ref strArr);
+                CreateNewRowTimekeeping(session, tempNote.SoGioTangCaNNCaDem.ToString(), soGioTangCaNNCaDem.Oid, tempNote.TimekeepingName.Oid,
+                   tempNote.Employee.Oid, index, ref strArr);
+                CreateNewRowTimekeeping(session, tempNote.SoGioTangCaNT.ToString(), soGioTangCaNT.Oid, tempNote.TimekeepingName.Oid,
+                   tempNote.Employee.Oid, index, ref strArr);
+                CreateNewRowTimekeeping(session, tempNote.SoGioTangCaNTCaDem.ToString(), soGioTangCaNTCaDem.Oid, tempNote.TimekeepingName.Oid,
+                   tempNote.Employee.Oid, index, ref strArr);
+                CreateNewRowTimekeeping(session, tempNote.SoPhutDiTre.ToString(), soPhutDiTre.Oid, tempNote.TimekeepingName.Oid,
+                   tempNote.Employee.Oid, index, ref strArr);
+                CreateNewRowTimekeeping(session, tempNote.SoPhutVeSom.ToString(), soPhutVeSom.Oid, tempNote.TimekeepingName.Oid,
+                  tempNote.Employee.Oid, index, ref strArr);
+                CreateNewRowTimekeeping(session, tempNote.TongSoGioLam.ToString(), tongThoiGianLam.Oid, tempNote.TimekeepingName.Oid,
+                  tempNote.Employee.Oid, index, ref strArr);
+                CreateNewRowTimekeeping(session, tempNote.NgayCongThucTe.ToString(), ngayCongThucTe.Oid, tempNote.TimekeepingName.Oid,
+                  tempNote.Employee.Oid, index, ref strArr);
+                CreateNewRowTimekeeping(session, tempNote.NgayTinhCong.ToString(), ngayTinhCong.Oid, tempNote.TimekeepingName.Oid,
+                  tempNote.Employee.Oid, index, ref strArr);
 
-                TimekeepingMonth _timekeepingMonth = new TimekeepingMonth(session);
-                _timekeepingMonth.Employee = tempNote.Employee;
-                _timekeepingMonth.TimekeepingName = tempNote.TimekeepingName;
-                _timekeepingMonth.Shift = tempNote.Shift;
-                // Thời Gian Vào
-                _timekeepingMonth.DataTypeTimekeeping = thoiGianVao;
-                _timekeepingMonth[index] = tempNote.ThoiGianVao.ToString();
-                _timekeepingMonth.Save();
-
-                // Thời Gian Ra
-                _timekeepingMonth = new TimekeepingMonth(session);
-                _timekeepingMonth.Employee = tempNote.Employee;
-                _timekeepingMonth.TimekeepingName = tempNote.TimekeepingName;
-                _timekeepingMonth.Shift = tempNote.Shift;
-                _timekeepingMonth.DataTypeTimekeeping = thoiGianRa;
-                _timekeepingMonth[index] = tempNote.ThoiGianRa.ToString();
-                _timekeepingMonth.Save();
-
-
-                // Số phút đi trể
-                _timekeepingMonth = new TimekeepingMonth(session);
-                _timekeepingMonth.Employee = tempNote.Employee;
-                _timekeepingMonth.TimekeepingName = tempNote.TimekeepingName;
-                _timekeepingMonth.Shift = tempNote.Shift;
-                _timekeepingMonth.DataTypeTimekeeping = soPhutDiTre;
-                _timekeepingMonth[index] = tempNote.SoPhutDiTre.ToString();
-                _timekeepingMonth.Save();
-
-                // Số Phút Về Sớm
-                _timekeepingMonth = new TimekeepingMonth(session);
-                _timekeepingMonth.Employee = tempNote.Employee;
-                _timekeepingMonth.TimekeepingName = tempNote.TimekeepingName;
-                _timekeepingMonth.Shift = tempNote.Shift;
-                _timekeepingMonth.DataTypeTimekeeping = soPhutVeSom;
-                _timekeepingMonth[index] = tempNote.SoPhutVeSom.ToString();
-                _timekeepingMonth.Save();
-
-                // Tổng Số Giờ Làm
-                _timekeepingMonth = new TimekeepingMonth(session);
-                _timekeepingMonth.Employee = tempNote.Employee;
-                _timekeepingMonth.TimekeepingName = tempNote.TimekeepingName;
-                _timekeepingMonth.Shift = tempNote.Shift;
-                _timekeepingMonth.DataTypeTimekeeping = tongThoiGianLam;
-                _timekeepingMonth[index] = tempNote.TongSoGioLam.ToString();
-                _timekeepingMonth.Save();
-
-
-                // Ngày Tính Công
-                _timekeepingMonth = new TimekeepingMonth(session);
-                _timekeepingMonth.Employee = tempNote.Employee;
-                _timekeepingMonth.TimekeepingName = tempNote.TimekeepingName;
-                _timekeepingMonth.Shift = tempNote.Shift;
-                _timekeepingMonth.DataTypeTimekeeping = ngayTinhCong;
-                _timekeepingMonth[index] = tempNote.NgayTinhCong.ToString();
-                _timekeepingMonth.Save();
-
-
-                // Ngày Công Thực Tế
-                _timekeepingMonth = new TimekeepingMonth(session);
-                _timekeepingMonth.Employee = tempNote.Employee;
-                _timekeepingMonth.TimekeepingName = tempNote.TimekeepingName;
-                _timekeepingMonth.Shift = tempNote.Shift;
-                _timekeepingMonth.DataTypeTimekeeping = ngayCongThucTe;
-                _timekeepingMonth[index] = tempNote.NgayCongThucTe.ToString();
-                _timekeepingMonth.Save();
-
-
-                // Số Giờ Tăng Ca NT
-                _timekeepingMonth = new TimekeepingMonth(session);
-                _timekeepingMonth.Employee = tempNote.Employee;
-                _timekeepingMonth.TimekeepingName = tempNote.TimekeepingName;
-                _timekeepingMonth.Shift = tempNote.Shift;
-                _timekeepingMonth.DataTypeTimekeeping = soGioTangCaNT;
-                _timekeepingMonth[index] = tempNote.SoGioTangCaNT.ToString();
-                _timekeepingMonth.Save();
-
-
-                // Số Giờ Tăng Ca NT Ca Đêm
-                _timekeepingMonth = new TimekeepingMonth(session);
-                _timekeepingMonth.Employee = tempNote.Employee;
-                _timekeepingMonth.TimekeepingName = tempNote.TimekeepingName;
-                _timekeepingMonth.Shift = tempNote.Shift;
-                _timekeepingMonth.DataTypeTimekeeping = soGioTangCaNTCaDem;
-                _timekeepingMonth[index] = tempNote.SoGioTangCaNTCaDem.ToString();
-                _timekeepingMonth.Save();
-
-                // Số Giờ Tăng Ca NN
-                _timekeepingMonth = new TimekeepingMonth(session);
-                _timekeepingMonth.Employee = tempNote.Employee;
-                _timekeepingMonth.TimekeepingName = tempNote.TimekeepingName;
-                _timekeepingMonth.Shift = tempNote.Shift;
-                _timekeepingMonth.DataTypeTimekeeping = soGioTangCaNN;
-                _timekeepingMonth[index] = tempNote.SoGioTangCaNN.ToString();
-                _timekeepingMonth.Save();
-
-                // Số Giờ Tăng Ca NN Ca Đêm
-                _timekeepingMonth = new TimekeepingMonth(session);
-                _timekeepingMonth.Employee = tempNote.Employee;
-                _timekeepingMonth.TimekeepingName = tempNote.TimekeepingName;
-                _timekeepingMonth.Shift = tempNote.Shift;
-                _timekeepingMonth.DataTypeTimekeeping = soGioTangCaNNCaDem;
-                _timekeepingMonth[index] = tempNote.SoGioTangCaNNCaDem.ToString();
-                _timekeepingMonth.Save();
-
-                // Số Giờ Tăng Ca NL
-                _timekeepingMonth = new TimekeepingMonth(session);
-                _timekeepingMonth.Employee = tempNote.Employee;
-                _timekeepingMonth.TimekeepingName = tempNote.TimekeepingName;
-                _timekeepingMonth.Shift = tempNote.Shift;
-                _timekeepingMonth.DataTypeTimekeeping = soGioTangCaNL;
-                _timekeepingMonth[index] = tempNote.SoGioTangCaNL.ToString();
-                _timekeepingMonth.Save();
-
-
-               // session.CommitChanges();
-
+                
             }
-            session.CommitChanges();
+            session.BeginTransaction();
+            foreach(string str in strArr)
+            {
+                session.ExecuteNonQuery(str);
+            }
+            session.CommitTransaction();
+        }
+
+        private void acFilterByTimekeepingMonth_Execute(object sender, SingleChoiceActionExecuteEventArgs e)
+        {
+            tkname = e.SelectedChoiceActionItem.Data as TimekeepingName;
+            ((DevExpress.ExpressApp.ListView)View).CollectionSource.Criteria["Filter1"] = new BinaryOperator(
+           "TimekeepingName.Oid", tkname.Oid, BinaryOperatorType.Equal);
         }
     }
 }

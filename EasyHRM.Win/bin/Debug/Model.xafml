@@ -1,18 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
-  <Options Skin="Visual Studio 2013 Blue" UIType="TabbedMDI" FormStyle="Ribbon">
-    <RibbonOptions RibbonControlStyle="Office2013" />
-  </Options>
-  <SchemaModules>
-    <SchemaModule Name="CloneObjectModule" Version="14.1.6.0" IsNewNode="True" />
-    <SchemaModule Name="SystemModule" Version="14.1.6.0" IsNewNode="True" />
-    <SchemaModule Name="SystemWindowsFormsModule" Version="14.1.6.0" IsNewNode="True" />
-  </SchemaModules>
-  <Views>
-    <ListView Id="TimekeepingMonth_ListView">
-      <Columns>
-        <ColumnInfo Id="DataTypeTimekeeping" Width="135" ImmediatePostData="True" PropertyName="DataTypeTimekeeping.DataType" />
-      </Columns>
-    </ListView>
-  </Views>
+	<Options Skin="Visual Studio 2013 Blue" UIType="TabbedMDI" FormStyle="Ribbon">
+	  <RibbonOptions RibbonControlStyle="Office2013" />
+	</Options>
 </Application>

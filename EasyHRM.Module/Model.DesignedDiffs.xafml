@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="EasyHRM" Logo="ExpressAppLogo">
+  <BOModel>
+    <Class Name="EasyHRM.Module.BusinessObjects.Timekeeping">
+      <OwnMembers>
+        <Member Name="ThoiGianRa" EditMaskType="DateTime" EditMask="HH:mm" DisplayFormat="HH:mm" />
+        <Member Name="ThoiGianVao" EditMaskType="DateTime" EditMask="HH:mm" DisplayFormat="HH:mm" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.TimekeepingMonth" DefaultListViewShowAutoFilterRow="True" DefaultLookupListView="" DefaultDetailView="" />
+  </BOModel>
   <SchemaModules>
     <SchemaModule Name="CloneObjectModule" Version="14.1.6.0" IsNewNode="True" />
     <SchemaModule Name="SystemModule" Version="14.1.6.0" IsNewNode="True" />
@@ -127,18 +136,39 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="Timekeeping_ListView">
+    <ListView Id="Timekeeping_ListView" FreezeColumnIndices="True" IsGroupPanelVisible="True" AutoExpandAllGroups="False" ShowAutoFilterRow="True">
       <Columns>
-        <ColumnInfo Id="SoPhutDiTre" DisplayFormat="{0:#,###,##0.##}" EditMask="#,###,##0.##" />
-        <ColumnInfo Id="SoPhutVeSom" DisplayFormat="{0:#,###,##0.##}" EditMask="#,###,##0.##" />
-        <ColumnInfo Id="TongSoGioLam" DisplayFormat="{0:#,###,##0.##}" EditMask="#,###,##0.##" />
-        <ColumnInfo Id="SoGioTangCaNT" DisplayFormat="{0:#,###,##0.##}" EditMask="#,###,##0.##" />
-        <ColumnInfo Id="SoGioTangCaNTCaDem" EditMask="#,###,##0.##" DisplayFormat="{0:#,###,##0.##}" />
-        <ColumnInfo Id="SoGioTangCaNN" DisplayFormat="{0:#,###,##0.##}" EditMask="#,###,##0.##" />
-        <ColumnInfo Id="SoGioTangCaNNCaDem" EditMask="#,###,##0.##" DisplayFormat="{0:#,###,##0.##}" />
-        <ColumnInfo Id="SoGioTangCaNL" DisplayFormat="{0:#,###,##0.##}" EditMask="#,###,##0.##" />
+        <ColumnInfo Id="Name" Index="0" />
+        <ColumnInfo Id="TimekeepingName" Index="1" />
+        <ColumnInfo Id="Employee" Index="2" />
+        <ColumnInfo Id="Shift" Index="3" />
+        <ColumnInfo Id="Date" Index="4" />
+        <ColumnInfo Id="ThoiGianVao" Index="5" />
+        <ColumnInfo Id="ThoiGianRa" Index="6" />
+        <ColumnInfo Id="SoPhutDiTre" DisplayFormat="{0:#,###,##0.##}" EditMask="#,###,##0.##" Index="7" />
+        <ColumnInfo Id="SoPhutVeSom" DisplayFormat="{0:#,###,##0.##}" EditMask="#,###,##0.##" Index="8" />
+        <ColumnInfo Id="TongSoGioLam" DisplayFormat="{0:#,###,##0.##}" EditMask="#,###,##0.##" Index="9" />
+        <ColumnInfo Id="NgayCongThucTe" Index="10" />
+        <ColumnInfo Id="NgayTinhCong" Index="11" />
+        <ColumnInfo Id="SoGioTangCaNT" DisplayFormat="{0:#,###,##0.##}" EditMask="#,###,##0.##" Index="12" />
+        <ColumnInfo Id="SoGioTangCaNTCaDem" EditMask="#,###,##0.##" DisplayFormat="{0:#,###,##0.##}" Index="13" />
+        <ColumnInfo Id="SoGioTangCaNN" DisplayFormat="{0:#,###,##0.##}" EditMask="#,###,##0.##" Index="14" />
+        <ColumnInfo Id="SoGioTangCaNNCaDem" EditMask="#,###,##0.##" DisplayFormat="{0:#,###,##0.##}" Index="15" />
+        <ColumnInfo Id="SoGioTangCaNL" DisplayFormat="{0:#,###,##0.##}" EditMask="#,###,##0.##" Index="16" />
       </Columns>
       <PivotSettings ShowColumnTotals="True" />
+    </ListView>
+    <DetailView Id="TimekeepingMonth_DetailView">
+      <Items>
+        <PropertyEditor Id="TimekeepingName" PropertyName="TimekeepingName.timekeepingName" />
+      </Items>
+    </DetailView>
+    <ListView Id="TimekeepingMonth_ListView" IsGroupPanelVisible="True" ShowAutoFilterRow="True" AllowEdit="True" ShowDetailView="False">
+      <Columns>
+        <ColumnInfo Id="TimekeepingName" PropertyName="TimekeepingName" AllowEdit="False" />
+        <ColumnInfo Id="Employee" AllowEdit="False" />
+        <ColumnInfo Id="DataTypeTimekeeping" PropertyName="DataTypeTimekeeping" AllowEdit="False" LookupProperty="DataType" />
+      </Columns>
     </ListView>
   </Views>
 </Application>

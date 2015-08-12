@@ -1,8 +1,3 @@
-D:\Project\EasyHRM\EasyHRM.Win\obj\Debug\EasyHRM.Win.csprojResolveAssemblyReference.cache
-D:\Project\EasyHRM\EasyHRM.Win\obj\Debug\EasyHRM.Win.Properties.Resources.resources
-D:\Project\EasyHRM\EasyHRM.Win\obj\Debug\EasyHRM.Win.EasyHRMWindowsFormsApplication.resources
-D:\Project\EasyHRM\EasyHRM.Win\obj\Debug\EasyHRM.Win.csproj.GenerateResource.Cache
-D:\Project\EasyHRM\EasyHRM.Win\obj\Debug\EasyHRM.Win.exe.licenses
 D:\Project\EasyHRM\EasyHRM.Win\bin\Debug\Model.xafml
 D:\Project\EasyHRM\EasyHRM.Win\bin\Debug\EasyHRM.Win.exe.config
 D:\Project\EasyHRM\EasyHRM.Win\bin\Debug\EasyHRM.Win.exe
@@ -33,5 +28,10 @@ D:\Project\EasyHRM\EasyHRM.Win\bin\Debug\Xpand.Persistent.Base.pdb
 D:\Project\EasyHRM\EasyHRM.Win\bin\Debug\Xpand.Persistent.BaseImpl.pdb
 D:\Project\EasyHRM\EasyHRM.Win\bin\Debug\Xpand.Utils.pdb
 D:\Project\EasyHRM\EasyHRM.Win\bin\Debug\Xpand.Xpo.pdb
+D:\Project\EasyHRM\EasyHRM.Win\obj\Debug\EasyHRM.Win.csprojResolveAssemblyReference.cache
+D:\Project\EasyHRM\EasyHRM.Win\obj\Debug\EasyHRM.Win.Properties.Resources.resources
+D:\Project\EasyHRM\EasyHRM.Win\obj\Debug\EasyHRM.Win.EasyHRMWindowsFormsApplication.resources
+D:\Project\EasyHRM\EasyHRM.Win\obj\Debug\EasyHRM.Win.csproj.GenerateResource.Cache
+D:\Project\EasyHRM\EasyHRM.Win\obj\Debug\EasyHRM.Win.exe.licenses
 D:\Project\EasyHRM\EasyHRM.Win\obj\Debug\EasyHRM.Win.exe
 D:\Project\EasyHRM\EasyHRM.Win\obj\Debug\EasyHRM.Win.pdb

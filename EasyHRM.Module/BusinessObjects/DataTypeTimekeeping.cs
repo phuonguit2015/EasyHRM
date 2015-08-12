@@ -36,17 +36,17 @@ namespace EasyHRM.Module.BusinessObjects
             set { SetPropertyValue("DataType", ref _dataType, value); }
         }
 
-        private KieuDuLieu _type;
+        private int _type;
         [XafDisplayName("Kiểu Dữ Liệu")]
-        public KieuDuLieu TypeData
+        public int TypeData
         {
             get { return _type; }
             set { SetPropertyValue("TypeData", ref _type, value); }
         }
     }
 
-    public enum KieuDuLieu
-    {
-        Int, String, DateTime, Double, Decimal
-    }
+    //public enum KieuDuLieu
+    //{
+    //    Int, String, DateTime, Double, Decimal
+    //}
 }

@@ -177,6 +177,18 @@
     <Compile Include="Controllers\ImportData.Designer.cs">
       <DependentUpon>ImportData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ShowDetailViewFromListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ShowDetailViewFromListViewController.Designer.cs">
+      <DependentUpon>ShowDetailViewFromListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\TimekeepingMonthViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\TimekeepingMonthViewController.Designer.cs">
+      <DependentUpon>TimekeepingMonthViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\TimekeepingViewController.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -200,6 +212,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Controllers\ImportData.resx">
       <DependentUpon>ImportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\TimekeepingMonthViewController.resx">
+      <DependentUpon>TimekeepingMonthViewController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controllers\TimekeepingViewController.resx">
       <DependentUpon>TimekeepingViewController.cs</DependentUpon>

@@ -30,8 +30,8 @@ namespace EasyHRM.Module.Controllers
         {
             this.components = new System.ComponentModel.Container();
             this.acImportFromExcel = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
-            this.acFilterByEmployeeCode = new DevExpress.ExpressApp.Actions.ParametrizedAction(this.components);
             this.ImportToTimekeepingMonth = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
+            this.acFilterByTimekeepingMonth = new DevExpress.ExpressApp.Actions.SingleChoiceAction(this.components);
             // 
             // acImportFromExcel
             // 
@@ -44,23 +44,21 @@ namespace EasyHRM.Module.Controllers
             this.acImportFromExcel.TypeOfView = typeof(DevExpress.ExpressApp.ListView);
             this.acImportFromExcel.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.ImportFromExcel_Execute);
             // 
-            // acFilterByEmployeeCode
-            // 
-            this.acFilterByEmployeeCode.Caption = "Filter By Employee Code";
-            this.acFilterByEmployeeCode.ConfirmationMessage = null;
-            this.acFilterByEmployeeCode.Id = "FilterByEmployeeCode";
-            this.acFilterByEmployeeCode.NullValuePrompt = null;
-            this.acFilterByEmployeeCode.ShortCaption = null;
-            this.acFilterByEmployeeCode.ToolTip = null;
-            this.acFilterByEmployeeCode.Execute += new DevExpress.ExpressApp.Actions.ParametrizedActionExecuteEventHandler(this.acFilterByEmployeeCode_Execute);
-            // 
             // ImportToTimekeepingMonth
             // 
-            this.ImportToTimekeepingMonth.Caption = null;
+            this.ImportToTimekeepingMonth.Caption = "Convert To Timekeeping Month";
             this.ImportToTimekeepingMonth.ConfirmationMessage = null;
-            this.ImportToTimekeepingMonth.Id = "6f59fa7a-31ef-41f0-97c1-df6497d378a5";
+            this.ImportToTimekeepingMonth.Id = "ConvertToTimekeepingMonth";
             this.ImportToTimekeepingMonth.ToolTip = null;
             this.ImportToTimekeepingMonth.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.ImportToTimekeepingMonth_Execute);
+            // 
+            // acFilterByTimekeepingMonth
+            // 
+            this.acFilterByTimekeepingMonth.Caption = "Filter By Timekeeping Month";
+            this.acFilterByTimekeepingMonth.ConfirmationMessage = null;
+            this.acFilterByTimekeepingMonth.Id = "FilterByTimekeepingMonth";
+            this.acFilterByTimekeepingMonth.ToolTip = null;
+            this.acFilterByTimekeepingMonth.Execute += new DevExpress.ExpressApp.Actions.SingleChoiceActionExecuteEventHandler(this.acFilterByTimekeepingMonth_Execute);
             // 
             // TimekeepingViewController
             // 
@@ -73,8 +71,8 @@ namespace EasyHRM.Module.Controllers
         #endregion
 
         private DevExpress.ExpressApp.Actions.SimpleAction acImportFromExcel;
-        private DevExpress.ExpressApp.Actions.ParametrizedAction acFilterByEmployeeCode;
         private DevExpress.ExpressApp.Actions.SimpleAction ImportToTimekeepingMonth;
+        private DevExpress.ExpressApp.Actions.SingleChoiceAction acFilterByTimekeepingMonth;
 
     }
 }

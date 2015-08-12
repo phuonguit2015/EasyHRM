@@ -389,12 +389,12 @@ namespace EasyHRM.Module.Controllers
                            #region Tính thời gian đi trể về sớm
                            if (ts.TotalMinutes > 0)
                            {
-                               t.SoPhutDiTre = ts.TotalMinutes;
+                               t.SoPhutDiTre = Math.Round(ts.TotalMinutes,2);
                            }
                            ts = t.ThoiGianRa - value.ThoiGianRa;
                            if (ts.TotalMinutes < 0)
                            {
-                               t.SoPhutVeSom = ts.TotalMinutes * -1;
+                               t.SoPhutVeSom = Math.Round(-ts.TotalMinutes, 2);
                            }
 
                            _SoGioLamCuaCa = value.TongSoGioLam;
@@ -405,7 +405,7 @@ namespace EasyHRM.Module.Controllers
                            #endregion
 
                #region Tổng số giờ làm
-               t.TongSoGioLam = tsValue.TotalHours;
+               t.TongSoGioLam = Math.Round(tsValue.TotalHours,2);
                #endregion
 
                //
@@ -442,7 +442,7 @@ namespace EasyHRM.Module.Controllers
                        "EndDate",t.Date, BinaryOperatorType.LessOrEqual)));
                if (holidayDate != null)
                {
-                   t.SoGioTangCaNL = tsValue.TotalHours;
+                   t.SoGioTangCaNL = Math.Round(tsValue.TotalHours,2);
 
                    t.NgayTinhCong = 0;
                }
@@ -458,27 +458,27 @@ namespace EasyHRM.Module.Controllers
                            double d = tsValue.TotalHours - _SoGioLamCuaCa;
                            if (d >= parameter.SoGioToiThieuTinhTangCa) //  Lớn hơn 15p thì mới tính tăng ca (0.25 giờ)
                            {
-                               t.SoGioTangCaNT = d;
+                               t.SoGioTangCaNT = Math.Round(d,2);
 
                                TimeSpan ts2 = t.ThoiGianRa - parameter.ThoiGianTinhCaDem;
                                // Nếu giờ ra sau giờ ra tính ca đêm, thì mới tính ca đêm
                                if (ts2.TotalHours >= parameter.SoGioToiThieuTinhTangCa)
                                {
-                                   t.SoGioTangCaNTCaDem = ts2.TotalHours;
-                                   t.SoGioTangCaNT = tsValue.TotalHours - ts2.TotalHours;
+                                   t.SoGioTangCaNTCaDem = Math.Round(ts2.TotalHours,2);
+                                   t.SoGioTangCaNT = Math.Round((tsValue.TotalHours - ts2.TotalHours),2);
                                }
                            }
                        }
                    }
                    else
                    {
-                       t.SoGioTangCaNN = tsValue.TotalHours;
+                       t.SoGioTangCaNN = Math.Round(tsValue.TotalHours,2);
                        TimeSpan ts2 = t.ThoiGianRa - parameter.ThoiGianTinhCaDem;
                        // Nếu giờ ra sau giờ ra tính ca đêm, thì mới tính ca đêm
                        if (ts2.TotalHours >= parameter.SoGioToiThieuTinhTangCa)
                        {
-                           t.SoGioTangCaNNCaDem = ts2.TotalHours;
-                           t.SoGioTangCaNN = tsValue.TotalHours - ts2.TotalHours;
+                           t.SoGioTangCaNNCaDem = Math.Round(ts2.TotalHours,2);
+                           t.SoGioTangCaNN = Math.Round((tsValue.TotalHours - ts2.TotalHours),2);
                        }
                    }
                }
