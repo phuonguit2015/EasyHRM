@@ -41,11 +41,12 @@ namespace EasyHRM.Module.BusinessObjects
             set { SetPropertyValue<Employee>("Employee", value); }
         }
 
-        [XafDisplayName("Ca Làm Việc")]
-        public Shift Shift
+        private double _sum;
+        [XafDisplayName("Tổng")]
+        public double Sum
         {
-            get { return GetPropertyValue<Shift>("Shift"); }
-            set { SetPropertyValue<Shift>("Shift", value); }
+            get { return _sum; }
+            set { SetPropertyValue("Sum", ref _sum, value); }
         }
         
         [XafDisplayName("Loại Dữ Liệu Chấm Công")]
@@ -55,8 +56,7 @@ namespace EasyHRM.Module.BusinessObjects
             set { SetPropertyValue<DataTypeTimekeeping>("DataTypeTimekeeping", value); }
         }
 
-        #region Ngày        
-        
+        #region Ngày
         private string _ngay1;
         [XafDisplayName("Ngày 1")]
         public string Ngay1

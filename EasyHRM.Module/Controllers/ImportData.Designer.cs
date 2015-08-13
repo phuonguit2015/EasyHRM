@@ -58,7 +58,7 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleLabelItem1 = new DevExpress.XtraLayout.SimpleLabelItem();
+            this.lblText = new DevExpress.XtraLayout.SimpleLabelItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -87,7 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblText)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -116,6 +116,8 @@
             // 
             this.progressBarControl1.Location = new System.Drawing.Point(145, 418);
             this.progressBarControl1.Name = "progressBarControl1";
+            this.progressBarControl1.Properties.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
+            this.progressBarControl1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.progressBarControl1.Size = new System.Drawing.Size(175, 18);
             this.progressBarControl1.StyleController = this.layoutControl1;
             this.progressBarControl1.TabIndex = 15;
@@ -136,13 +138,13 @@
             // 
             this.dtNgayKetThuc.EditValue = null;
             this.dtNgayKetThuc.Enabled = false;
-            this.dtNgayKetThuc.Location = new System.Drawing.Point(505, 89);
+            this.dtNgayKetThuc.Location = new System.Drawing.Point(501, 89);
             this.dtNgayKetThuc.Name = "dtNgayKetThuc";
             this.dtNgayKetThuc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtNgayKetThuc.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtNgayKetThuc.Size = new System.Drawing.Size(240, 20);
+            this.dtNgayKetThuc.Size = new System.Drawing.Size(244, 20);
             this.dtNgayKetThuc.StyleController = this.layoutControl1;
             this.dtNgayKetThuc.TabIndex = 13;
             this.dtNgayKetThuc.EditValueChanged += new System.EventHandler(this.dtNgayKetThuc_EditValueChanged);
@@ -151,13 +153,13 @@
             // 
             this.dtNgayBatDau.EditValue = null;
             this.dtNgayBatDau.Enabled = false;
-            this.dtNgayBatDau.Location = new System.Drawing.Point(132, 89);
+            this.dtNgayBatDau.Location = new System.Drawing.Point(128, 89);
             this.dtNgayBatDau.Name = "dtNgayBatDau";
             this.dtNgayBatDau.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtNgayBatDau.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtNgayBatDau.Size = new System.Drawing.Size(249, 20);
+            this.dtNgayBatDau.Size = new System.Drawing.Size(253, 20);
             this.dtNgayBatDau.StyleController = this.layoutControl1;
             this.dtNgayBatDau.TabIndex = 12;
             this.dtNgayBatDau.EditValueChanged += new System.EventHandler(this.dtNgayBatDau_EditValueChanged);
@@ -245,12 +247,12 @@
             // 
             // lkupTenBangChamCong
             // 
-            this.lkupTenBangChamCong.Location = new System.Drawing.Point(132, 63);
+            this.lkupTenBangChamCong.Location = new System.Drawing.Point(128, 63);
             this.lkupTenBangChamCong.Name = "lkupTenBangChamCong";
             this.lkupTenBangChamCong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkupTenBangChamCong.Properties.NullText = "";
-            this.lkupTenBangChamCong.Size = new System.Drawing.Size(528, 20);
+            this.lkupTenBangChamCong.Size = new System.Drawing.Size(532, 20);
             this.lkupTenBangChamCong.StyleController = this.layoutControl1;
             this.lkupTenBangChamCong.TabIndex = 11;
             this.lkupTenBangChamCong.EditValueChanged += new System.EventHandler(this.lkupTenBangChamCong_EditValueChanged);
@@ -276,7 +278,7 @@
             this.layoutControlItem9,
             this.layoutControlItem10,
             this.layoutControlItem11,
-            this.simpleLabelItem1});
+            this.lblText});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(767, 452);
@@ -414,7 +416,7 @@
             this.layoutControlItem7.Size = new System.Drawing.Size(652, 26);
             this.layoutControlItem7.Spacing = new DevExpress.XtraLayout.Utils.Padding(10, 0, 0, 0);
             this.layoutControlItem7.Text = "Tên Bảng Chấm Công";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(107, 13);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(103, 13);
             this.layoutControlItem7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem8
@@ -426,7 +428,7 @@
             this.layoutControlItem8.Size = new System.Drawing.Size(373, 24);
             this.layoutControlItem8.Spacing = new DevExpress.XtraLayout.Utils.Padding(10, 0, 0, 0);
             this.layoutControlItem8.Text = "Ngày Bắt Đầu";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(107, 13);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(103, 13);
             // 
             // layoutControlItem9
             // 
@@ -437,7 +439,7 @@
             this.layoutControlItem9.Size = new System.Drawing.Size(374, 24);
             this.layoutControlItem9.Spacing = new DevExpress.XtraLayout.Utils.Padding(10, 10, 0, 0);
             this.layoutControlItem9.Text = "Ngày Kết Thúc";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(107, 13);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(103, 13);
             // 
             // layoutControlItem10
             // 
@@ -465,16 +467,16 @@
             this.layoutControlItem11.TextToControlDistance = 0;
             this.layoutControlItem11.TextVisible = false;
             // 
-            // simpleLabelItem1
+            // lblText
             // 
-            this.simpleLabelItem1.AllowHotTrack = false;
-            this.simpleLabelItem1.CustomizationFormText = "LabelsimpleLabelItem1";
-            this.simpleLabelItem1.Location = new System.Drawing.Point(0, 406);
-            this.simpleLabelItem1.Name = "simpleLabelItem1";
-            this.simpleLabelItem1.Size = new System.Drawing.Size(123, 26);
-            this.simpleLabelItem1.Spacing = new DevExpress.XtraLayout.Utils.Padding(10, 0, 0, 0);
-            this.simpleLabelItem1.Text = "LabelsimpleLabelItem1";
-            this.simpleLabelItem1.TextSize = new System.Drawing.Size(107, 13);
+            this.lblText.AllowHotTrack = false;
+            this.lblText.CustomizationFormText = "Thêm mới 0 dòng.";
+            this.lblText.Location = new System.Drawing.Point(0, 406);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(123, 26);
+            this.lblText.Spacing = new DevExpress.XtraLayout.Utils.Padding(10, 0, 0, 0);
+            this.lblText.Text = "Thêm mới 0 dòng.";
+            this.lblText.TextSize = new System.Drawing.Size(103, 13);
             // 
             // openFileDialog1
             // 
@@ -517,7 +519,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblText)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -554,6 +556,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraEditors.ProgressBarControl progressBarControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
-        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
+        private DevExpress.XtraLayout.SimpleLabelItem lblText;
     }
 }

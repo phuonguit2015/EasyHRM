@@ -38,6 +38,10 @@ namespace EasyHRM.Module.Controllers
             layoutControlItem8.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             layoutControlItem9.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             layoutControlItem10.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            layoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            lblText.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+
+
 
             lkupTenBangChamCong.Visible = false;
             frame = frm;
@@ -80,10 +84,14 @@ namespace EasyHRM.Module.Controllers
             Employee _nhanVien = null;
             Timekeeping _chamCong = null;
 
+            progressBarControl1.Properties.Minimum = 0;
+            progressBarControl1.Properties.Maximum = dt.Rows.Count;
+
             if (dt.Rows.Count > 0)
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
+                    
                     if (dt.Rows[i]["IsChecked"] == System.DBNull.Value || Convert.ToBoolean(dt.Rows[i]["IsChecked"]) == false)
                         continue;
                     if (dt.Rows[i]["Mã NV"] == System.DBNull.Value)
@@ -156,6 +164,10 @@ namespace EasyHRM.Module.Controllers
                     #endregion
 
                     objSpace.CommitChanges();
+
+                    progressBarControl1.Position = i + 1;
+                    lblText.Text = string.Format("Thêm mới {0} dòng.", i + 1);
+
                 }
             }
 
@@ -172,7 +184,8 @@ namespace EasyHRM.Module.Controllers
             layoutControlItem8.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             layoutControlItem9.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             layoutControlItem10.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-
+            layoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            lblText.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             
             //Convert To Table Template
             DataTable dt_temp = dt_temp = gridControl1.DataSource as DataTable;
@@ -421,12 +434,10 @@ namespace EasyHRM.Module.Controllers
                // 
                // Ngày tính công nếu làm mà không phải tăng ca thì tính bằng 1, ngược lại bằng 0. Mặc định bằng 1
                //
-               #region Ngày tính công
-               if (t.NgayTinhCong != 0)
-               {
-                   t.NgayTinhCong = 1;
-               }
-               #endregion
+               
+               t.NgayTinhCong = 1;
+               
+               
 
                //
                // Kiểm tra ngày chấm công có phải ngày lễ không

@@ -1,4 +1,4 @@
-namespace EasyHRM.Module.Controllers
+﻿namespace EasyHRM.Module.Controllers
 {
     partial class TimekeepingMonthViewController 
     {
@@ -30,14 +30,35 @@ namespace EasyHRM.Module.Controllers
         {
             this.components = new System.ComponentModel.Container();
             this.singleChoiceAction1 = new DevExpress.ExpressApp.Actions.SingleChoiceAction(this.components);
+            this.acSum = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
+            this.acTinhLuong = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             // 
             // singleChoiceAction1
             // 
-            this.singleChoiceAction1.Caption = null;
+            this.singleChoiceAction1.Caption = "Filter With Timekeeping Name";
+            this.singleChoiceAction1.Category = "Filters";
             this.singleChoiceAction1.ConfirmationMessage = null;
-            this.singleChoiceAction1.Id = "fb80ec9c-781e-49eb-bba3-b4f6adc80264";
+            this.singleChoiceAction1.Id = "FilterWithTimekeepingName";
             this.singleChoiceAction1.ToolTip = null;
             this.singleChoiceAction1.Execute += new DevExpress.ExpressApp.Actions.SingleChoiceActionExecuteEventHandler(this.singleChoiceAction1_Execute);
+            // 
+            // acSum
+            // 
+            this.acSum.Caption = "Sum";
+            this.acSum.Category = "Edit";
+            this.acSum.ConfirmationMessage = null;
+            this.acSum.Id = "Sum";
+            this.acSum.ToolTip = null;
+            this.acSum.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.acSum_Execute);
+            // 
+            // acTinhLuong
+            // 
+            this.acTinhLuong.Caption = "Bảng Tính Lương";
+            this.acTinhLuong.Category = "Options";
+            this.acTinhLuong.ConfirmationMessage = null;
+            this.acTinhLuong.Id = "TinhLuong";
+            this.acTinhLuong.ToolTip = null;
+            this.acTinhLuong.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.acTinhLuong_Execute);
             // 
             // TimekeepingMonthViewController
             // 
@@ -50,6 +71,8 @@ namespace EasyHRM.Module.Controllers
         #endregion
 
         private DevExpress.ExpressApp.Actions.SingleChoiceAction singleChoiceAction1;
+        private DevExpress.ExpressApp.Actions.SimpleAction acSum;
+        private DevExpress.ExpressApp.Actions.SimpleAction acTinhLuong;
 
     }
 }

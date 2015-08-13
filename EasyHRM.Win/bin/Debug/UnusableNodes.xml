@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="TimekeepingMonth_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Shift" Width="120" Index="2" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

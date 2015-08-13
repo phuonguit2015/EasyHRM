@@ -19,6 +19,7 @@ using DevExpress.XtraEditors;
 using DevExpress.Xpo;
 using DevExpress.ExpressApp.Xpo;
 using DevExpress.XtraLayout;
+using System.Windows.Forms;
 
 namespace EasyHRM.Module.Controllers
 {
@@ -67,7 +68,7 @@ namespace EasyHRM.Module.Controllers
                 {
                     tkname = listTimekeepingName[0];
                 }
-                ((ListView)View).CollectionSource.Criteria["Filter1"] = new BinaryOperator(
+                ((DevExpress.ExpressApp.ListView)View).CollectionSource.Criteria["Filter1"] = new BinaryOperator(
                         "TimekeepingName.Oid", tkname.Oid, BinaryOperatorType.Equal);
             }          
 
@@ -99,10 +100,6 @@ namespace EasyHRM.Module.Controllers
                     }
 
                 }
-
-                
-
-
             }
             editor1.GridView.ColumnPanelRowHeight = 30;
             editor1.GridView.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
@@ -131,11 +128,43 @@ namespace EasyHRM.Module.Controllers
         private void singleChoiceAction1_Execute(object sender, SingleChoiceActionExecuteEventArgs e)
         {
              tkname = e.SelectedChoiceActionItem.Data as TimekeepingName;
-             ((ListView)View).CollectionSource.Criteria.Clear();
-             ((ListView)View).CollectionSource.Criteria["Filter1"] = new BinaryOperator(
+             ((DevExpress.ExpressApp.ListView)View).CollectionSource.Criteria.Clear();
+             ((DevExpress.ExpressApp.ListView)View).CollectionSource.Criteria["Filter1"] = new BinaryOperator(
             "TimekeepingName.Oid", tkname.Oid, BinaryOperatorType.Equal);
             
              ChangeColumnCaption();
+        }
+
+        private void acSum_Execute(object sender, SimpleActionExecuteEventArgs e)
+        {
+           
+            foreach (TimekeepingMonth tkmonth in ((DevExpress.ExpressApp.ListView)View).CollectionSource.List)
+            {
+                double sum = 0;
+                for (int i = 1; i < 32; i++)
+                {
+                    try
+                    {
+                        sum += Convert.ToDouble(tkmonth[i]);
+                    }
+                    catch
+                    {
+                        break;
+                    }
+                }
+                double j = Math.Round(sum,2);
+                string str = string.Format("UPDATE \"TimekeepingMonth\" SET \"Sum\" = '{1}', \"OptimisticLockField\" = null, \"GCRecord\" = null WHERE" +
+                    "\"Oid\" = '{0}'", tkmonth.Oid,j);
+                ((XPObjectSpace)ObjectSpace).Session.BeginTransaction();
+                ((XPObjectSpace)ObjectSpace).Session.ExecuteNonQuery(str);
+                ((XPObjectSpace)ObjectSpace).Session.CommitTransaction();
+            }
+        }
+
+        private void acTinhLuong_Execute(object sender, SimpleActionExecuteEventArgs e)
+        {
+            Form f = new Salaries(((XPObjectSpace)ObjectSpace).Session);
+            f.ShowDialog();
         }
 
     }

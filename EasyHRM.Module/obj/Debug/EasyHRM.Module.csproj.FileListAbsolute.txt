@@ -21,3 +21,4 @@ D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.dll.licenses
 D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.dll
 D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.pdb
 D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.csprojResolveAssemblyReference.cache
+D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.Controllers.Salaries.resources

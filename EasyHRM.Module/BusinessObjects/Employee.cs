@@ -57,5 +57,31 @@ namespace EasyHRM.Module.BusinessObjects
             get { return _employeeCode; }
             set { SetPropertyValue("EmployeeCode", ref _employeeCode, value); }
         }
+
+        private string _tikiCode;
+        [XafDisplayName("TIKI Code")]
+        [Indexed(Unique = true)]
+        public string TikiCode
+        {
+            get { return _tikiCode; }
+            set { SetPropertyValue("TikiCode", ref _tikiCode, value); }
+        }
+
+        private double _luongCoBan;
+        [XafDisplayName("Lương Cơ Bản")]
+        public double LuongCoBan
+        {
+            get { return _luongCoBan; }
+            set { SetPropertyValue("LuongCoBan", ref _luongCoBan, value); }
+        }
+
+        private string _maSoThue;
+        [XafDisplayName("Mã Số Thuế Cá Nhân")]
+        public string MaSoThue
+        {
+            get { return _maSoThue; }
+            set { SetPropertyValue("MaSoThue", ref _maSoThue, value); }
+        }
+
     }
 }

@@ -1,0 +1,16 @@
+﻿Tên Cột|Số Thứ Tự Cột			
+TikiCode|1
+Tên Nhân Viên|4
+Mã NV|2
+Mã Số Thuế|3
+Phòng Ban|5
+Chi Nhánh|
+Vị Trí|6
+Lương Cơ Bản|10
+Số Giờ Tăng Ca NT|29
+Số Giờ Tăng Ca NT Ca Đêm|30
+Số Giờ Tăng Ca NN|31
+Số Giờ Tăng Ca NN|32
+Số Giờ Tăng Ca NL|33
+Số Ngày Công|22
+Số Ngày Công Thực Tế|24
