@@ -15,7 +15,7 @@ using DevExpress.Persistent.Validation;
 namespace EasyHRM.Module.BusinessObjects
 {
     [DefaultClassOptions]   
-    [NavigationItem ("Employee Manager")]
+    [NavigationItem ("Quản Lý Nhân Viên")]
     public class Employee : Person
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (http://documentation.devexpress.com/#Xaf/CustomDocument3146).
         public Employee(Session session)
@@ -81,6 +81,13 @@ namespace EasyHRM.Module.BusinessObjects
         {
             get { return _maSoThue; }
             set { SetPropertyValue("MaSoThue", ref _maSoThue, value); }
+        }
+
+        [XafDisplayName("Ca Làm Việc Mặc Định")]
+        public Shift DefaultShift
+        {
+            get { return GetPropertyValue<Shift>("DefaultShift"); }
+            set { SetPropertyValue<Shift>("DefaultShift", value); }
         }
 
     }

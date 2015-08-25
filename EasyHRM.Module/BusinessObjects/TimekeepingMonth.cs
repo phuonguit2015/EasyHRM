@@ -14,7 +14,8 @@ using DevExpress.Persistent.Validation;
 
 namespace EasyHRM.Module.BusinessObjects
 {
-    [DefaultClassOptions]  
+    [DefaultClassOptions]
+    [NavigationItem("Quản Lý Chấm Công")]
     public class TimekeepingMonth : BaseObject
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (http://documentation.devexpress.com/#Xaf/CustomDocument3146).
         public TimekeepingMonth(Session session)
@@ -40,6 +41,14 @@ namespace EasyHRM.Module.BusinessObjects
             get { return GetPropertyValue<Employee>("Employee"); }
             set { SetPropertyValue<Employee>("Employee", value); }
         }
+
+        [XafDisplayName("Phòng Ban")]
+        public Department Department
+        {
+            get { return GetPropertyValue<Department>("Department"); }
+            set { SetPropertyValue<Department>("Department", value); }
+        }
+
 
         private double _sum;
         [XafDisplayName("Tổng")]

@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="EasyHRM" Logo="ExpressAppLogo">
+  <ActionDesign>
+    <ActionToContainerMapping>
+      <ActionContainer Id="CapNhatDuLieu" IsNewNode="True">
+        <ActionLink ActionId="acCapNhatDuLieu" IsNewNode="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
   <BOModel>
     <Class Name="EasyHRM.Module.BusinessObjects.Timekeeping">
       <OwnMembers>
@@ -52,41 +59,49 @@
       </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="40.93333333333333">
-            <LayoutGroup Id="Employee" RelativeSize="35.830618892508141" Direction="Horizontal">
-              <LayoutGroup Id="Auto5381af65-7f82-49db-be19-a205d8b91d07" ShowCaption="False" Caption="Auto5381af65-7f82-49db-be19-a205d8b91d07(4)" Index="0" RelativeSize="80" IsNewNode="True">
-                <LayoutItem Id="Branch" ViewItem="Branch" SizeConstraintsType="Default" Index="0" RelativeSize="29.09090909090909" IsNewNode="True" />
-                <LayoutItem Id="Department" ViewItem="Department" SizeConstraintsType="Default" Index="1" RelativeSize="21.818181818181817" IsNewNode="True" />
-                <LayoutItem Id="Position" ViewItem="Position" SizeConstraintsType="Default" Index="2" RelativeSize="21.818181818181817" IsNewNode="True" />
-                <LayoutItem Id="EmployeeCode" ViewItem="EmployeeCode" SizeConstraintsType="Default" Index="3" RelativeSize="27.272727272727273" IsNewNode="True" />
+          <LayoutGroup Id="SimpleEditors" RelativeSize="45.6">
+            <LayoutGroup Id="Employee" RelativeSize="42.397660818713447" Direction="Horizontal">
+              <LayoutGroup Id="Auto5381af65-7f82-49db-be19-a205d8b91d07" ShowCaption="False" Caption="Auto5381af65-7f82-49db-be19-a205d8b91d07(4)" Index="0" RelativeSize="51.733333333333334" IsNewNode="True">
+                <LayoutItem Id="Branch" ViewItem="Branch" SizeConstraintsType="Default" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+                <LayoutItem Id="Department" ViewItem="Department" SizeConstraintsType="Default" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+                <LayoutItem Id="Position" ViewItem="Position" SizeConstraintsType="Default" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
+                <LayoutItem Id="EmployeeCode" ViewItem="EmployeeCode" SizeConstraintsType="Default" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
               </LayoutGroup>
-              <LayoutItem Id="Photo" ShowCaption="False" ViewItem="Photo" SizeConstraintsType="Default" Index="1" RelativeSize="20" IsNewNode="True" />
-              <LayoutItem Id="Branch" SizeConstraintsType="Default" RelativeSize="37.2093023255814" Removed="True" />
-              <LayoutItem Id="Department" SizeConstraintsType="Default" RelativeSize="27.906976744186046" Removed="True" />
-              <LayoutItem Id="EmployeeCode" Removed="True" />
-              <LayoutItem Id="Position" SizeConstraintsType="Default" RelativeSize="34.883720930232556" Removed="True" />
+              <LayoutGroup Id="Employee_col1" Index="1" RelativeSize="13.733333333333333" Caption="Employee_col1" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="Branch" Removed="True" />
+                <LayoutItem Id="Department" Removed="True" />
+                <LayoutItem Id="EmployeeCode" Removed="True" />
+                <LayoutItem Id="Position" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Employee_col2" Index="1" RelativeSize="35.333333333333336">
+                <LayoutItem Id="TikiCode" SizeConstraintsType="Default" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="LuongCoBan" SizeConstraintsType="Default" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="MaSoThue" SizeConstraintsType="Default" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="DefaultShift" SizeConstraintsType="Default" RelativeSize="28.571428571428573" />
+              </LayoutGroup>
+              <LayoutItem Id="Photo" ShowCaption="False" ViewItem="Photo" SizeConstraintsType="Default" Index="2" RelativeSize="10" IsNewNode="True" />
             </LayoutGroup>
-            <LayoutGroup Id="Person" RelativeSize="36.807817589576544" Caption="Thông Tin Cá Nhân">
-              <LayoutGroup Id="Person_col1" Direction="Vertical" RelativeSize="52">
+            <LayoutGroup Id="Person" RelativeSize="33.040935672514621" Caption="Thông Tin Cá Nhân">
+              <LayoutGroup Id="Person_col1" Direction="Vertical" RelativeSize="51.866666666666667">
                 <LayoutItem Id="FirstName" ViewItem="FirstName" SizeConstraintsType="Default" Index="0" RelativeSize="36.363636363636367" IsNewNode="True" Removed="True" />
                 <LayoutItem Id="LastName" ViewItem="LastName" SizeConstraintsType="Default" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" Removed="True" />
                 <LayoutItem Id="MiddleName" ViewItem="MiddleName" SizeConstraintsType="Default" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" Removed="True" />
               </LayoutGroup>
-              <LayoutGroup Id="Person_col2" RelativeSize="45.06666666666667">
+              <LayoutGroup Id="Person_col2" RelativeSize="45.2">
                 <LayoutItem Id="Birthday" SizeConstraintsType="Default" RelativeSize="36.363636363636367" />
                 <LayoutItem Id="FullName" SizeConstraintsType="Default" RelativeSize="27.272727272727273" />
                 <LayoutItem Id="Email" SizeConstraintsType="Default" RelativeSize="36.363636363636367" />
               </LayoutGroup>
             </LayoutGroup>
-            <LayoutGroup Id="Party" RelativeSize="27.361563517915311" Index="2">
+            <LayoutGroup Id="Party" RelativeSize="24.561403508771932" Index="2">
               <LayoutItem Id="Address1" SizeConstraintsType="Default" Index="0" RelativeSize="35.714285714285715" />
               <LayoutItem Id="Address2" SizeConstraintsType="Default" Index="1" RelativeSize="28.571428571428573" />
               <LayoutItem Id="DisplayName" ViewItem="DisplayName" SizeConstraintsType="Default" Index="2" RelativeSize="35.714285714285715" IsNewNode="True" Removed="True" />
               <LayoutItem Id="Photo" Removed="True" />
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="PhoneNumbers_Group" Direction="Vertical" RelativeSize="59.06666666666667" Caption="Số Điện Thoại">
-            <LayoutItem Id="PhoneNumbers" SizeConstraintsType="Default" RelativeSize="91.196388261851013" />
+          <LayoutGroup Id="PhoneNumbers_Group" Direction="Vertical" RelativeSize="54.4" Caption="Số Điện Thoại">
+            <LayoutItem Id="PhoneNumbers" SizeConstraintsType="Default" RelativeSize="90.441176470588232" />
           </LayoutGroup>
         </LayoutGroup>
       </Layout>
@@ -97,32 +112,41 @@
       </Columns>
     </ListView>
     <DetailView Id="Timekeeping_DetailView">
+      <Items>
+        <ActionContainerViewItem Id="CapNhatDuLieu" Caption="Cập Nhật Dữ Liệu" Orientation="Horizontal" PaintStyle="Caption" ActionContainer="MyCategory" IsNewNode="True" />
+      </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
           <LayoutGroup Id="SimpleEditors" RelativeSize="100">
-            <LayoutGroup Id="Timekeeping" RelativeSize="100">
-              <LayoutGroup Id="Timekeeping_col1" RelativeSize="94.782608695652172">
-                <LayoutItem Id="Date" SizeConstraintsType="Default" Index="0" RelativeSize="6.866952789699571" />
-                <LayoutItem Id="Employee" ViewItem="Employee" SizeConstraintsType="Default" Index="1" RelativeSize="5.1502145922746783" IsNewNode="True" Removed="True" />
-                <LayoutItem Id="Shift" ViewItem="Shift" SizeConstraintsType="Default" Index="2" RelativeSize="5.1502145922746783" IsNewNode="True" Removed="True" />
+            <LayoutGroup Id="Timekeeping" RelativeSize="100" Direction="Vertical" Caption="Bảng Chấm Công">
+              <LayoutGroup Id="Timekeeping_col1" RelativeSize="92.1455938697318">
+                <LayoutItem Id="TimekeepingName" SizeConstraintsType="Default" Index="0" RelativeSize="6.6528066528066532" />
+                <LayoutItem Id="Date" SizeConstraintsType="Default" Index="1" RelativeSize="4.98960498960499" />
+                <LayoutItem Id="Name" SizeConstraintsType="Default" Index="1" RelativeSize="4.8879837067209779" Removed="True" />
+                <LayoutItem Id="Employee" ViewItem="Employee" SizeConstraintsType="Default" Index="2" RelativeSize="4.98960498960499" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="Shift" ViewItem="Shift" SizeConstraintsType="Default" Index="3" RelativeSize="4.98960498960499" IsNewNode="True" Removed="True" />
                 <LayoutItem Id="SoPhutDiTre" SizeConstraintsType="Default" RelativeSize="5.3452115812917596" Index="3" Removed="True" />
-                <LayoutItem Id="ThoiGianVao" ViewItem="ThoiGianVao" SizeConstraintsType="Default" Index="3" RelativeSize="5.1502145922746783" IsNewNode="True" Removed="True" />
                 <LayoutItem Id="SoPhutVeSom" SizeConstraintsType="Default" RelativeSize="5.3452115812917596" Index="4" Removed="True" />
-                <LayoutItem Id="ThoiGianRa" ViewItem="ThoiGianRa" SizeConstraintsType="Default" Index="4" RelativeSize="5.1502145922746783" IsNewNode="True" Removed="True" />
-                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="5" RelativeSize="72.532188841201716" Caption="Thông Tin Chấm Công" IsNewNode="True">
-                  <LayoutItem Id="SoPhutDiTre" ViewItem="SoPhutDiTre" SizeConstraintsType="Default" Index="0" RelativeSize="9.4674556213017755" IsNewNode="True" />
-                  <LayoutItem Id="SoPhutVeSom" ViewItem="SoPhutVeSom" SizeConstraintsType="Default" Index="1" RelativeSize="7.1005917159763312" IsNewNode="True" />
-                  <LayoutItem Id="NgayTinhCong" ViewItem="NgayTinhCong" SizeConstraintsType="Default" Index="2" RelativeSize="7.1005917159763312" IsNewNode="True" />
-                  <LayoutItem Id="NgayCongThucTe" ViewItem="NgayCongThucTe" SizeConstraintsType="Default" Index="3" RelativeSize="7.1005917159763312" IsNewNode="True" />
-                  <LayoutItem Id="TongSoGioLam" ViewItem="TongSoGioLam" SizeConstraintsType="Default" Index="4" RelativeSize="7.1005917159763312" IsNewNode="True" />
-                  <LayoutItem Id="SoGioTangCaNT" ViewItem="SoGioTangCaNT" SizeConstraintsType="Default" Index="5" RelativeSize="7.1005917159763312" IsNewNode="True" />
-                  <LayoutItem Id="SoGioTangCaNTCaDem" ViewItem="SoGioTangCaNTCaDem" SizeConstraintsType="Default" Index="6" RelativeSize="7.1005917159763312" IsNewNode="True" />
-                  <LayoutItem Id="SoGioTangCaNN" ViewItem="SoGioTangCaNN" SizeConstraintsType="Default" Index="7" RelativeSize="7.1005917159763312" IsNewNode="True" />
-                  <LayoutItem Id="SoGioTangCaNNCaDem" ViewItem="SoGioTangCaNNCaDem" SizeConstraintsType="Default" Index="8" RelativeSize="7.1005917159763312" IsNewNode="True" />
-                  <LayoutItem Id="SoGioTangCaNL" ViewItem="SoGioTangCaNL" SizeConstraintsType="Default" Index="9" RelativeSize="23.964497041420117" IsNewNode="True" />
+                <LayoutItem Id="ThoiGianVao" ViewItem="ThoiGianVao" SizeConstraintsType="Default" Index="4" RelativeSize="4.98960498960499" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="ThoiGianRa" ViewItem="ThoiGianRa" SizeConstraintsType="Default" Index="5" RelativeSize="4.98960498960499" IsNewNode="True" Removed="True" />
+                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="6" RelativeSize="58.419958419958419" Caption="Thông Tin Chấm Công" IsNewNode="True">
+                  <LayoutItem Id="SoPhutDiTre" ViewItem="SoPhutDiTre" SizeConstraintsType="Default" Index="0" RelativeSize="11.387900355871887" IsNewNode="True" />
+                  <LayoutItem Id="SoPhutVeSom" ViewItem="SoPhutVeSom" SizeConstraintsType="Default" Index="1" RelativeSize="8.5409252669039137" IsNewNode="True" />
+                  <LayoutItem Id="NgayTinhCong" ViewItem="NgayTinhCong" SizeConstraintsType="Default" Index="2" RelativeSize="8.5409252669039137" IsNewNode="True" />
+                  <LayoutItem Id="NgayCongThucTe" ViewItem="NgayCongThucTe" SizeConstraintsType="Default" Index="3" RelativeSize="8.5409252669039137" IsNewNode="True" />
+                  <LayoutItem Id="TongSoGioLam" ViewItem="TongSoGioLam" SizeConstraintsType="Default" Index="4" RelativeSize="8.5409252669039137" IsNewNode="True" />
+                  <LayoutItem Id="SoGioTangCaNT" ViewItem="SoGioTangCaNT" SizeConstraintsType="Default" Index="5" RelativeSize="8.5409252669039137" IsNewNode="True" />
+                  <LayoutItem Id="SoGioTangCaNTCaDem" ViewItem="SoGioTangCaNTCaDem" SizeConstraintsType="Default" Index="6" RelativeSize="8.5409252669039137" IsNewNode="True" />
+                  <LayoutItem Id="SoGioTangCaNN" ViewItem="SoGioTangCaNN" SizeConstraintsType="Default" Index="7" RelativeSize="8.5409252669039137" IsNewNode="True" />
+                  <LayoutItem Id="SoGioTangCaNNCaDem" ViewItem="SoGioTangCaNNCaDem" SizeConstraintsType="Default" Index="8" RelativeSize="8.5409252669039137" IsNewNode="True" />
+                  <LayoutItem Id="SoGioTangCaNL" ViewItem="SoGioTangCaNL" SizeConstraintsType="Default" Index="9" RelativeSize="11.387900355871887" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autoc979c85f-a218-44c6-9f68-014da063c4a9" ShowCaption="False" Caption="Autoc979c85f-a218-44c6-9f68-014da063c4a9(23)" Direction="Horizontal" Index="7" RelativeSize="9.97920997920998" IsNewNode="True">
+                  <LayoutItem Id="Item2" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="82.707993474714513" ViewItem="" IsNewNode="True" />
+                  <LayoutItem Id="CapNhatDuLieu" ViewItem="CapNhatDuLieu" SizeConstraintsType="Default" Index="1" RelativeSize="17.29200652528548" IsNewNode="True" />
                 </LayoutGroup>
               </LayoutGroup>
-              <LayoutGroup Id="Timekeeping_col2" RelativeSize="0.43478260869565216" Caption="Timekeeping_col2" Direction="Horizontal">
+              <LayoutGroup Id="Timekeeping_col2" RelativeSize="46.372239747634069" Caption="Timekeeping_col2" Direction="Horizontal" Removed="True">
                 <LayoutItem Id="NgayCongThucTe" Removed="True" />
                 <LayoutItem Id="NgayTinhCong" Removed="True" />
                 <LayoutItem Id="SoGioTangCaNL" Removed="True" />
@@ -130,6 +154,7 @@
                 <LayoutItem Id="SoGioTangCaNNCaDem" Removed="True" />
                 <LayoutItem Id="SoGioTangCaNT" Removed="True" />
                 <LayoutItem Id="SoGioTangCaNTCaDem" Removed="True" />
+                <LayoutItem Id="TongSoGioLam" Removed="True" />
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>

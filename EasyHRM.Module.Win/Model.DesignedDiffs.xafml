@@ -1,8 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application>
+<Application PreferredLanguage="vi">
+  <ActionDesign>
+    <ActionToContainerMapping>
+      <ActionContainer Id="Tools">
+        <ActionLink ActionId="EditModel" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="Workflow" Removed="True" />
+    </ActionToContainerMapping>
+  </ActionDesign>
   <BOModel>
-    <Class Name="EasyHRM.Module.BusinessObjects.TimekeepingMonth" DefaultDetailView="TimekeepingMonth_DetailView" DefaultLookupListView="TimekeepingMonth_LookupListView" />
+    <Class Name="EasyHRM.Module.BusinessObjects.Branch" Caption="Chi Nhánh" />
+    <Class Name="EasyHRM.Module.BusinessObjects.DataTypeTimekeeping" Caption="Loại Dữ Liệu Chấm Công" />
+    <Class Name="EasyHRM.Module.BusinessObjects.DefaultValueTimekeeping" Caption="Giá Trị Mặc Định Loại Dữ Liệu Chấm Công" />
+    <Class Name="EasyHRM.Module.BusinessObjects.Department" Caption="Phòng Ban" />
+    <Class Name="EasyHRM.Module.BusinessObjects.Employee" Caption="Nhân Viên" />
+    <Class Name="EasyHRM.Module.BusinessObjects.Holiday" Caption="Kỳ Nghĩ" />
+    <Class Name="EasyHRM.Module.BusinessObjects.HolidayTypes" Caption="Loại Kỳ Nghĩ" />
+    <Class Name="EasyHRM.Module.BusinessObjects.Parameter" Caption="Tham Số" />
+    <Class Name="EasyHRM.Module.BusinessObjects.Position" Caption="Chức Vụ" />
+    <Class Name="EasyHRM.Module.BusinessObjects.Salaries" Caption="Bảng Lương" />
+    <Class Name="EasyHRM.Module.BusinessObjects.Shift" Caption="Ca Làm Việc" />
+    <Class Name="EasyHRM.Module.BusinessObjects.Timekeeping" Caption="Bảng Chấm Công" />
+    <Class Name="EasyHRM.Module.BusinessObjects.TimekeepingMonth" DefaultDetailView="TimekeepingMonth_DetailView" DefaultLookupListView="TimekeepingMonth_LookupListView" Caption="Bảng Chấm Công Theo Tháng" />
+    <Class Name="EasyHRM.Module.BusinessObjects.TimekeepingName" Caption="Tên Bảng Chấm Công" />
   </BOModel>
+  <CreatableItems>
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.Branch" Caption="Chi Nhánh" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.DataTypeTimekeeping" Caption="Loại Dữ Liệu Chấm Công" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.DefaultValueTimekeeping" Caption="Giá Trị Mặc Định Loại Dữ Liệu Chấm Công" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.Department" Caption="Phòng Ban" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.Employee" Caption="Nhân Viên" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.Holiday" Caption="Ngày Nghĩ" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.HolidayTypes" Caption="Loại Ngày Nghĩ" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.Parameter" Caption="Tham Số" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.Position" Caption="Chức Vụ" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.Salaries" Caption="Bảng Lương" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.Shift" Caption="Ca Làm Việc" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.Timekeeping" Caption="Bảng Chấm Công" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.TimekeepingMonth" Caption="Bảng Chấm Công Theo Tháng" />
+    <CreatableItem ClassName="EasyHRM.Module.BusinessObjects.TimekeepingName" Caption="Tên Bảng Chấm Công" />
+  </CreatableItems>
   <SchemaModules>
     <SchemaModule Name="CloneObjectModule" Version="14.1.6.0" IsNewNode="True" />
     <SchemaModule Name="SystemModule" Version="14.1.6.0" IsNewNode="True" />

@@ -32,21 +32,19 @@ namespace EasyHRM.Module.Controllers
        {            
             InitializeComponent();
             dt = new DataTable();
-            dt.Columns.Add("IsChecked",typeof(bool));
             objSpace = obj;
             layoutControlItem7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             layoutControlItem8.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             layoutControlItem9.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             layoutControlItem10.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             layoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            lblText.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-
 
 
             lkupTenBangChamCong.Visible = false;
             frame = frm;
 
-            LoadDataLookup();
+
+            LoadDataLookup();         
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -56,6 +54,9 @@ namespace EasyHRM.Module.Controllers
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
+
+            
             er.Clear();
             if(string.IsNullOrEmpty(lkupTenBangChamCong.Text))
             {
@@ -79,13 +80,11 @@ namespace EasyHRM.Module.Controllers
                 er.SetError(dtNgayKetThuc, "Bạn chưa chọn ngày kết thúc!");
                 return;
             }
-           
+         
             Department _phongBan = null;
             Employee _nhanVien = null;
             Timekeeping _chamCong = null;
 
-            progressBarControl1.Properties.Minimum = 0;
-            progressBarControl1.Properties.Maximum = dt.Rows.Count;
 
             if (dt.Rows.Count > 0)
             {
@@ -158,25 +157,49 @@ namespace EasyHRM.Module.Controllers
                     _chamCong.Date = _date;
                     _chamCong.ThoiGianVao = TimeSpan.Parse(dt.Rows[i]["ThoiGianVao"].ToString());
                     _chamCong.ThoiGianRa = TimeSpan.Parse(dt.Rows[i]["ThoiGianRa"].ToString());
-                    _chamCong.TimekeepingName = (TimekeepingName)lkupTenBangChamCong.EditValue;
-                    _chamCong = CalProperties(_chamCong);
+                    _chamCong.TimekeepingName = (TimekeepingName)lkupTenBangChamCong.EditValue; 
+                    if(checkEdit1.Checked == true)
+                    {
+                        _chamCong.Shift = _nhanVien.DefaultShift;
+                    }
+                    _chamCong = CalProperties(_chamCong, checkEdit1.Checked);
                     _chamCong.Save();
                     #endregion
 
                     objSpace.CommitChanges();
 
-                    progressBarControl1.Position = i + 1;
-                    lblText.Text = string.Format("Thêm mới {0} dòng.", i + 1);
-
                 }
             }
 
-           
-            this.Close();
+            this.Cursor = Cursors.Default;
+            XtraMessageBox.Show("Import dữ liệu thành công.");
+
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
+            XPQuery<DefaultValueTimekeeping> _DefaultValueTimekeeping = new XPQuery<DefaultValueTimekeeping>((
+                   (XPObjectSpace)objSpace).Session);
+            List<DefaultValueTimekeeping> xpcDefaultValueTimekeeping;
+            xpcDefaultValueTimekeeping = (from tso in _DefaultValueTimekeeping select tso).ToList();
+
+            dt = new DataTable();
+            dt.Columns.Add("IsChecked", typeof(bool));
+            dt.Columns.Add("Phòng ban",typeof(string));
+            dt.Columns.Add("Mã NV", typeof(string));
+            dt.Columns.Add("Tên nhân viên", typeof(string));
+            dt.Columns.Add("Ngày", typeof(DateTime));          
+            dt.Columns.Add("Ca Mặc Định", typeof(string));
+            dt.Columns.Add("Ca Dự Đoán", typeof(string));
+            dt.Columns.Add("Vào 1", typeof(string));
+            dt.Columns.Add("Ra 1", typeof(string));
+            dt.Columns.Add("Vào 2", typeof(string));
+            dt.Columns.Add("Ra 2", typeof(string));
+            dt.Columns.Add("Vào 3", typeof(string));
+            dt.Columns.Add("Ra 3", typeof(string));
+
+
             if (string.IsNullOrEmpty(txtDuongDanFile.Text))
                 return;
             lkupTenBangChamCong.Visible = true;
@@ -185,8 +208,7 @@ namespace EasyHRM.Module.Controllers
             layoutControlItem9.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             layoutControlItem10.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             layoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            lblText.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            
+
             //Convert To Table Template
             DataTable dt_temp = dt_temp = gridControl1.DataSource as DataTable;
             if (dt_temp == null)
@@ -223,20 +245,22 @@ namespace EasyHRM.Module.Controllers
             //Xóa dòng đầu tiền trong bảng
             dt_temp.Rows.RemoveAt(0);
 
-            //Đưa về bảng 8 cột
+            ////Đưa về bảng 8 cột
 
-            for (int i = 0; i < dt_temp.Columns.Count; i++)
-            {
-                DataColumn columns = dt_temp.Columns[i];
-                foreach (string col in dsCol)
-                {
-                    if (col == columns.ColumnName && !dt.Columns.Contains(col))
-                    {
-                        dt.Columns.Add(col);
-                        break;
-                    }
-                }
-            } 
+            //for (int i = 0; i < dt_temp.Columns.Count; i++)
+            //{
+            //    DataColumn columns = dt_temp.Columns[i];
+            //    foreach (string col in dsCol)
+            //    {
+            //        if (col == columns.ColumnName && !dt.Columns.Contains(col))
+            //        {
+            //            dt.Columns.Add(col);
+            //            break;
+            //        }
+            //    }
+            //}
+           
+          
 
             //Them 2 cot thoi gian vao thoi gian ra
             DataColumn column = dt.Columns.Add("ThoiGianVao", typeof(string));
@@ -274,7 +298,34 @@ namespace EasyHRM.Module.Controllers
                 {
                     dt.Rows[i]["ThoiGianRa"] = "00:00";
                 }
+
+                Employee emp = objSpace.FindObject<Employee>(new BinaryOperator(
+                      "EmployeeCode", dt.Rows[i]["Mã NV"]));
+                if (emp != null)
+                {
+                    if (emp.DefaultShift != null && emp.DefaultShift.ShiftName != null)
+                    {
+                        dt.Rows[i]["Ca Mặc Định"] = emp.DefaultShift.ShiftName;
+                    }
+                }
+
+                if (dt.Rows[i]["ThoiGianRa"] != null && dt.Rows[i]["ThoiGianVao"] != null)
+                {
+                    foreach (DefaultValueTimekeeping value in xpcDefaultValueTimekeeping)
+                    {
+                        if (value.ThoiGianVao != null && value.ThoiGianRa != null)
+                        {
+                            TimeSpan ts = TimeSpan.Parse(dt.Rows[i]["ThoiGianVao"].ToString()) - value.ThoiGianVao;
+                            if (ts.Hours == 0 && ts.Minutes > -30 && ts.Minutes < 30)
+                            {
+                                dt.Rows[i]["Ca Dự Đoán"] = value.Shift.ShiftName;
+                                break;
+                            }
+                        }
+                    }
+                }
             }
+           
 
             gridControl1.DataSource = null;
             gridView1.Columns.Clear();
@@ -284,7 +335,12 @@ namespace EasyHRM.Module.Controllers
             //Enable button Finish
             btnFinish.Enabled = true;
             btnNext.Enabled = false;
+
             gridView1.SelectAll();
+
+            checkEdit2.Checked = true;
+            this.Cursor = Cursors.Default;
+
         }
 
         private void btnOnpen_Click(object sender, EventArgs e)
@@ -354,26 +410,31 @@ namespace EasyHRM.Module.Controllers
         //
        private void gridView1_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
        {
-           for (int j = 0; j < gridView1.RowCount; j++)
+           if ((e.ControllerRow == -2147483648)|| (e.ControllerRow >= 0 && dt.Rows[e.ControllerRow]["ThoiGianVao"].ToString() != "00:00"))
            {
-               dt.Rows[j]["IsChecked"] = false;
-
-           }
-           
-           if (gridView1.SelectedRowsCount > 0)
-           {
-               for (int i = 0; i < gridView1.SelectedRowsCount; i++)
+               for (int j = 0; j < gridView1.RowCount; j++)
                {
-                   dt.Rows[gridView1.GetSelectedRows()[i]]["IsChecked"] = true;
+                   dt.Rows[j]["IsChecked"] = false;
+
+               }
+               if (gridView1.SelectedRowsCount > 0)
+               {
+                   for (int i = 0; i < gridView1.SelectedRowsCount; i++)
+                   {
+                       dt.Rows[gridView1.GetSelectedRows()[i]]["IsChecked"] = true;
+
+                   }
                }
            }
        }
+           
+    
 
 
         //
         // Xử lý các dữ liệu của 1 chấm công
         //
-       private Timekeeping CalProperties(Timekeeping t)
+       private Timekeeping CalProperties(Timekeeping t, bool isXepCaMacDinh)
        {              
            XPQuery<DefaultValueTimekeeping> _DefaultValueTimekeeping = new XPQuery<DefaultValueTimekeeping>((
                    (XPObjectSpace)objSpace).Session);
@@ -398,18 +459,20 @@ namespace EasyHRM.Module.Controllers
                        TimeSpan ts = t.ThoiGianVao - value.ThoiGianVao;
                        if (ts.Hours == 0 && ts.Minutes > -30 && ts.Minutes < 30)
                        {
-                           t.Shift = value.Shift;
+                           if (!isXepCaMacDinh)
+                           {
+                               t.Shift = value.Shift;
+                           }
                            #region Tính thời gian đi trể về sớm
                            if (ts.TotalMinutes > 0)
                            {
-                               t.SoPhutDiTre = Math.Round(ts.TotalMinutes,2);
+                               t.SoPhutDiTre = Math.Round(ts.TotalMinutes, 2);
                            }
                            ts = t.ThoiGianRa - value.ThoiGianRa;
                            if (ts.TotalMinutes < 0)
                            {
                                t.SoPhutVeSom = Math.Round(-ts.TotalMinutes, 2);
                            }
-
                            _SoGioLamCuaCa = value.TongSoGioLam;
                            break;
                        }
@@ -417,85 +480,99 @@ namespace EasyHRM.Module.Controllers
                }
                            #endregion
 
+
+
                #region Tổng số giờ làm
-               t.TongSoGioLam = Math.Round(tsValue.TotalHours,2);
+               if (tsValue.TotalHours > 0)
+               {
+                   t.TongSoGioLam = Math.Round(tsValue.TotalHours, 2);
+               }
+               else
+               {
+                   t.TongSoGioLam = 0;
+               }
                #endregion
 
-               //
-               // Ngày công thực tế nếu có làm thì gán bằng 1
-               //
-
-               #region Ngày công thực tế
-
-               t.NgayCongThucTe = 1;
-               #endregion
-
-
-               // 
-               // Ngày tính công nếu làm mà không phải tăng ca thì tính bằng 1, ngược lại bằng 0. Mặc định bằng 1
-               //
-               
-               t.NgayTinhCong = 1;
-               
-               
-
-               //
-               // Kiểm tra ngày chấm công có phải ngày lễ không
-               //
                t.SoGioTangCaNL = 0;
                t.SoGioTangCaNN = 0;
                t.SoGioTangCaNNCaDem = 0;
                t.SoGioTangCaNT = 0;
                t.SoGioTangCaNTCaDem = 0;
-
-               Holiday holidayDate = objSpace.FindObject<Holiday>(CriteriaOperator.And(new BinaryOperator(
-                   "StartDate", t.Date, BinaryOperatorType.GreaterOrEqual), new BinaryOperator(
-                       "EndDate",t.Date, BinaryOperatorType.LessOrEqual)));
-               if (holidayDate != null)
-               {
-                   t.SoGioTangCaNL = Math.Round(tsValue.TotalHours,2);
-
-                   t.NgayTinhCong = 0;
-               }
-               else
+               t.NgayCongThucTe = 0;
+               t.NgayTinhCong = 0;
+               if (t.Shift != null)
                {
                    //
-                   // Kiểm tra xem ngày đó có ca không nếu có ca thì là tăng ca ngày thường, không ca tăng ca ngày nghĩ.
+                   // Ngày công thực tế nếu có làm thì gán bằng 1
                    //
-                   if (t.Shift != null)
+
+                   #region Ngày công thực tế
+
+                   t.NgayCongThucTe = 1;
+                   #endregion
+
+
+                   // 
+                   // Ngày tính công nếu làm mà không phải tăng ca thì tính bằng 1, ngược lại bằng 0. Mặc định bằng 1
+                   //
+
+                   t.NgayTinhCong = 1;
+
+
+
+                   //
+                   // Kiểm tra ngày chấm công có phải ngày lễ không
+                   //
+
+
+                   Holiday holidayDate = objSpace.FindObject<Holiday>(CriteriaOperator.And(new BinaryOperator(
+                       "StartDate", t.Date, BinaryOperatorType.GreaterOrEqual), new BinaryOperator(
+                           "EndDate", t.Date, BinaryOperatorType.LessOrEqual)));
+                   if (holidayDate != null)
                    {
-                       if (_SoGioLamCuaCa != 0)
-                       {
-                           double d = tsValue.TotalHours - _SoGioLamCuaCa;
-                           if (d >= parameter.SoGioToiThieuTinhTangCa) //  Lớn hơn 15p thì mới tính tăng ca (0.25 giờ)
-                           {
-                               t.SoGioTangCaNT = Math.Round(d,2);
+                       t.SoGioTangCaNL = Math.Round(tsValue.TotalHours, 2);
 
-                               TimeSpan ts2 = t.ThoiGianRa - parameter.ThoiGianTinhCaDem;
-                               // Nếu giờ ra sau giờ ra tính ca đêm, thì mới tính ca đêm
-                               if (ts2.TotalHours >= parameter.SoGioToiThieuTinhTangCa)
-                               {
-                                   t.SoGioTangCaNTCaDem = Math.Round(ts2.TotalHours,2);
-                                   t.SoGioTangCaNT = Math.Round((tsValue.TotalHours - ts2.TotalHours),2);
-                               }
-                           }
-                       }
+                       t.NgayTinhCong = 0;
                    }
                    else
                    {
-                       t.SoGioTangCaNN = Math.Round(tsValue.TotalHours,2);
-                       TimeSpan ts2 = t.ThoiGianRa - parameter.ThoiGianTinhCaDem;
-                       // Nếu giờ ra sau giờ ra tính ca đêm, thì mới tính ca đêm
-                       if (ts2.TotalHours >= parameter.SoGioToiThieuTinhTangCa)
+                       //
+                       // Kiểm tra xem ngày đó có ca không nếu có ca thì là tăng ca ngày thường, không ca tăng ca ngày nghĩ.
+                       //
+                       if (t.Shift != null)
                        {
-                           t.SoGioTangCaNNCaDem = Math.Round(ts2.TotalHours,2);
-                           t.SoGioTangCaNN = Math.Round((tsValue.TotalHours - ts2.TotalHours),2);
+                           if (_SoGioLamCuaCa != 0)
+                           {
+                               double d = tsValue.TotalHours - _SoGioLamCuaCa;
+                               if (d >= parameter.SoGioToiThieuTinhTangCa) //  Lớn hơn 15p thì mới tính tăng ca (0.25 giờ)
+                               {
+                                   t.SoGioTangCaNT = Math.Round(d, 2);
+
+                                   TimeSpan ts2 = t.ThoiGianRa - parameter.ThoiGianTinhCaDem;
+                                   // Nếu giờ ra sau giờ ra tính ca đêm, thì mới tính ca đêm
+                                   if (ts2.TotalHours >= parameter.SoGioToiThieuTinhTangCa)
+                                   {
+                                       t.SoGioTangCaNTCaDem = Math.Round(ts2.TotalHours, 2);
+                                       t.SoGioTangCaNT = Math.Round((tsValue.TotalHours - ts2.TotalHours), 2);
+                                   }
+                               }
+                           }
+                       }
+                       else
+                       {
+                           t.SoGioTangCaNN = Math.Round(tsValue.TotalHours, 2);
+                           TimeSpan ts2 = t.ThoiGianRa - parameter.ThoiGianTinhCaDem;
+                           // Nếu giờ ra sau giờ ra tính ca đêm, thì mới tính ca đêm
+                           if (ts2.TotalHours >= parameter.SoGioToiThieuTinhTangCa)
+                           {
+                               t.SoGioTangCaNNCaDem = Math.Round(ts2.TotalHours, 2);
+                               t.SoGioTangCaNN = Math.Round((tsValue.TotalHours - ts2.TotalHours), 2);
+                           }
                        }
                    }
-               }
                #endregion
+               }
            }
-
            return t;
        }
 
@@ -562,6 +639,34 @@ namespace EasyHRM.Module.Controllers
               dtNgayKetThuc.EditValue = tkn.EndDate;
           }
       }
+
+      private void checkEdit2_CheckedChanged(object sender, EventArgs e)
+      {
+          if(checkEdit2.Checked == true)
+          {
+              for (int j = 0; j < gridView1.RowCount; j++)
+              {
+                  if(dt.Rows[j]["ThoiGianVao"].ToString() == "00:00")
+                  {
+                      gridView1.UnselectRow(j);
+                      dt.Rows[j]["IsChecked"] = false;
+                  }
+              }           
+          }
+          else
+          {
+              for (int j = 0; j < gridView1.RowCount; j++)
+              {
+                  if (dt.Rows[j]["ThoiGianVao"].ToString() == "00:00")
+                  {
+                      gridView1.SelectRow(j);
+                      dt.Rows[j]["IsChecked"] = true;
+
+                  }
+              }    
+          }
+      }
+
 
       
     }

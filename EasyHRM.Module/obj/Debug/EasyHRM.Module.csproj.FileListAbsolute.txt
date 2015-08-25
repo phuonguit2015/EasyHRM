@@ -11,7 +11,11 @@ D:\Project\EasyHRM\EasyHRM.Module\bin\Debug\AForge.Imaging.xml
 D:\Project\EasyHRM\EasyHRM.Module\bin\Debug\AForge.Math.xml
 D:\Project\EasyHRM\EasyHRM.Module\bin\Debug\AForge.Video.xml
 D:\Project\EasyHRM\EasyHRM.Module\bin\Debug\Fasterflect.xml
+D:\Project\EasyHRM\EasyHRM.Win\bin\Debug\EasyHRM.Module.dll
+D:\Project\EasyHRM\EasyHRM.Win\bin\Debug\EasyHRM.Module.pdb
 D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.Controllers.ImportData.resources
+D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.Controllers.Salaries.resources
+D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.Controllers.TimekeepingDetailViewController.resources
 D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.Controllers.TimekeepingMonthViewController.resources
 D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.Controllers.TimekeepingViewController.resources
 D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.EasyHRMModule.resources
@@ -20,5 +24,3 @@ D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.csproj.GenerateResour
 D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.dll.licenses
 D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.dll
 D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.pdb
-D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.csprojResolveAssemblyReference.cache
-D:\Project\EasyHRM\EasyHRM.Module\obj\Debug\EasyHRM.Module.Controllers.Salaries.resources

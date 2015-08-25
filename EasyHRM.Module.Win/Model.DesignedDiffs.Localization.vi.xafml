@@ -1,0 +1,2706 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Company="" Copyright="" Description="" Subtitle="" WebSite="">
+  <ActionDesign>
+    <Actions>
+      <Action Id="About Info" ConfirmationMessage="" />
+      <Action Id="Activate" ConfirmationMessage="" Caption="Hoạt Động" />
+      <Action Id="Cancel" ConfirmationMessage="" Caption="Hủy" />
+      <Action Id="CancelAction" ConfirmationMessage="" Caption="Hủy" />
+      <Action Id="CancelWorkflowInstance" Caption="Hủy" ConfirmationMessage="Bạn sẽ hủy những dòng được chọn. Bạn có muốn tiếp tục?" />
+      <Action Id="ChangeVariant" ConfirmationMessage="" Caption="Xem" />
+      <Action Id="ChooseSkin" ConfirmationMessage="" Caption="Chọn Giao Diện" />
+      <Action Id="CloneObject" ConfirmationMessage="" />
+      <Action Id="Close" Caption="Đóng" />
+      <Action Id="ConvertToTimekeepingMonth" ConfirmationMessage="" Caption="Chuyển Dữ Liệu Qua Bảng Chấm Công Tháng" />
+      <Action Id="CopyCellValue" ConfirmationMessage="" Caption="Sao Chép Giá Trị" />
+      <Action Id="CreateDashboard" ConfirmationMessage="" Caption="Tạo Bảng Điều Khiển" />
+      <Action Id="Deactivate" ConfirmationMessage="" Caption="Không Hoạt Động" />
+      <Action Id="Delete" Caption="Xóa" ConfirmationMessage="Bạn sẽ xóa những dòng được chọn. Bạn có muốn tiếp tục?" />
+      <Action Id="Delete Item" Caption="Xóa Mục" ConfirmationMessage="Bạn sẽ xóa những mục được chọn. Bạn có muốn tiếp tục?" />
+      <Action Id="Diagnostic Info" ConfirmationMessage="" />
+      <Action Id="Diagnostic Info.Actions Info" ConfirmationMessage="">
+        <ChoiceActionItems>
+          <ChoiceActionItem Id="Actions Info" Caption="Thông Tin Của Hành Động" />
+        </ChoiceActionItems>
+      </Action>
+      <Action Id="Diagnostic Info.EasyTest Control" ConfirmationMessage="" />
+      <Action Id="Diagnostic Info.Rules Info" ConfirmationMessage="" />
+      <Action Id="Diagnostic Info.View Info" ConfirmationMessage="" />
+      <Action Id="DialogCancel" ConfirmationMessage="" Caption="Hủy" />
+      <Action Id="DialogOK" ConfirmationMessage="" Caption="Đồng Ý" />
+      <Action Id="EditModel" ConfirmationMessage="" />
+      <Action Id="Exit" Caption="Thoát" ConfirmationMessage="" />
+      <Action Id="Export" ConfirmationMessage="" Caption="Xuất Dữ Liêu" />
+      <Action Id="ExportAnalysis" ConfirmationMessage="" />
+      <Action Id="FilterByTimekeepingMonth" ConfirmationMessage="" Caption="Lọc Dữ Liệu Theo Tên Bảng Chấm Công" />
+      <Action Id="FilterWithTimekeepingName" ConfirmationMessage="" ToolTip="Lọc Dữ Liệu Theo Tên Bảng Chấm Công" Caption="Lọc Dữ Liệu Với Tên Bảng Chấm Công" />
+      <Action Id="FullTextSearch" ConfirmationMessage="" Caption="Lọc Theo Dữ Liệu" ShortCaption="Tìm Kiếm" NullValuePrompt="Dữ Liệu Tìm Kiếm" ToolTip="Lọc Dữ Liệu" />
+      <Action Id="HideItemsFromDashboard" ConfirmationMessage="" Caption="Ẩn Từ Bảng Điều Khiển" ToolTip="Ẩn những mục được chọn từ Bảng Điều Khiển" />
+      <Action Id="ImportFromExcel" ConfirmationMessage="" Caption="Nhập Liệu Từ File Excel" />
+      <Action Id="Link" Caption="Liên Kết" />
+      <Action Id="ListViewShowObject" ConfirmationMessage="" Caption="Mở" />
+      <Action Id="Logoff" ConfirmationMessage="" Caption="Đăng Xuất" />
+      <Action Id="Logon" Caption="Đăng Nhập" ConfirmationMessage="" />
+      <Action Id="MergeAction" ConfirmationMessage="" />
+      <Action Id="NavigateBack" ConfirmationMessage="" Caption="Quay Lại" ToolTip="Quay lại" />
+      <Action Id="NavigateForward" ConfirmationMessage="" Caption="Tiếp Tục" ToolTip="Tiếp tục" />
+      <Action Id="New" ConfirmationMessage="" Caption="Thêm Mới">
+        <DisableReasons>
+          <Reason Id="MasterObjectIsNew" Caption="Các đối tượng sửa là mới." />
+        </DisableReasons>
+      </Action>
+      <Action Id="NextObject" Caption="Tiếp Theo" />
+      <Action Id="OpenObject" ConfirmationMessage="" Caption="Chỉnh Sửa" ToolTip="Mở dòng được chọn để chỉnh sửa.(SHIFT+CTRL+left click)" />
+      <Action Id="OrganizeDashboard" ConfirmationMessage="" Caption="Tổ Chức Bảng Điều Khiển" />
+      <Action Id="PageSetup" ConfirmationMessage="" Caption="Cài Đặt Trang Tính" ToolTip="Cài Đặt Trang Tính" />
+      <Action Id="PauseRecording" ConfirmationMessage="" />
+      <Action Id="PreviewReportV2" ConfirmationMessage="" Caption="Xem Trước" />
+      <Action Id="PreviousObject" Caption="Trở Lại" />
+      <Action Id="Print" ConfirmationMessage="" Caption="In" />
+      <Action Id="PrintPreview" ConfirmationMessage="" Caption="Xem Trước Khi In" ToolTip="Xem Trước Khi In" />
+      <Action Id="Refresh" Caption="Làm Mới" />
+      <Action Id="RefreshAction" ConfirmationMessage="" Caption="Tải Lại" ShortCaption="Làm Mới" ToolTip="Làm Mới" />
+      <Action Id="ReportViewerDialogControllerV2_Close" Caption="Đóng" ConfirmationMessage="" />
+      <Action Id="ResumeRecording" ConfirmationMessage="" />
+      <Action Id="Save" Caption="Lưu" ConfirmationMessage="" />
+      <Action Id="SaveAndClose" ConfirmationMessage="" Caption="Lưu Và Đóng" />
+      <Action Id="SaveAndNew" ConfirmationMessage="" Caption="Lưu Và Thêm Mới" />
+      <Action Id="SaveScript" ConfirmationMessage="" Caption="Lưu Script" />
+      <Action Id="SaveScriptForDialogWindow" ConfirmationMessage="" Caption="Lưu Script" />
+      <Action Id="SetFilter" ConfirmationMessage="" Caption="Lọc Dữ Liệu" />
+      <Action Id="ShowAllContexts" ConfirmationMessage="" Caption="Xác Nhận" ToolTip="Xác nhận những đối tượng được chọn trong phần hiện tại" />
+      <Action Id="ShowInReportV2" ConfirmationMessage="" Caption="Hiển Thị Trên Báo Cáo" ToolTip="Hiển thị những dòng được chọn trên báo cáo" />
+      <Action Id="ShowItemsOnDashboard" ConfirmationMessage="" Caption="Hiển Thị  Trên Bảng Điều Khiển" ToolTip="Hiển thị những mục được chọn trên bảng điều khiển" />
+      <Action Id="ShowNavigationItem" ConfirmationMessage="" Caption="Điều Hướng" />
+      <Action Id="ShowScript" ConfirmationMessage="" Caption="Hiển thị Script" />
+      <Action Id="ShowToolbar" ConfirmationMessage="" Caption="Hiện Toolbar" />
+      <Action Id="ShowWorkflowInstances" ConfirmationMessage="" />
+      <Action Id="Sum" ConfirmationMessage="" Caption="Tổng" />
+      <Action Id="TinhLuong" ConfirmationMessage="" />
+      <Action Id="Unlink" Caption="Bỏ Liên Kết" ConfirmationMessage="Bạn sẽ bỏ liên kết tới những dòng được chọn. Bạn có muốn tiếp tục?" />
+    </Actions>
+    <DisableReasons>
+      <Reason Id="Security" Caption="Từ chối truy cập" />
+    </DisableReasons>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.Editors.CriteriaProvider">
+      <OwnMembers>
+        <Member Name="FilteredObjectsType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="FilterString" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.ReportsV2.PredefinedRepotDataContainer">
+      <OwnMembers>
+        <Member Name="DataType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Kiểu Dữ Liêu" />
+        <Member Name="DisplayName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tên Hiển Thị" />
+        <Member Name="IsInplaceReport" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ParametersObjectType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="PredefinedReportType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.ScriptRecorder.Script">
+      <OwnMembers>
+        <Member Name="ScriptLog" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.AboutInfo">
+      <OwnMembers>
+        <Member Name="AboutInfoString" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Company" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Copyright" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Description" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="LogoImageName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ProductName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Version" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.ActionContainerDashboardOrganizationItem">
+      <OwnMembers>
+        <Member Name="ActionContainer" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.ActionContainerDescriptor">
+      <OwnMembers>
+        <Member Name="ActionContainerId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardCreationInfo">
+      <OwnMembers>
+        <Member Name="DashboardName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tên" />
+        <Member Name="NavigationGroupName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ViewItems" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Xem Các Mục" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardOrganizationItem" Caption="Tổ Chức Mục Trên Bảng Điều Khiển">
+      <OwnMembers>
+        <Member Name="Item" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Mục" />
+        <Member Name="Visibility" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Hiển Thị" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardOrganizer">
+      <OwnMembers>
+        <Member Name="ViewItems" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Xem Các Mục" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardViewItemDescriptor">
+      <OwnMembers>
+        <Member Name="ViewCaption" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ViewDescription" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ViewId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.DiagnosticInfoObject">
+      <OwnMembers>
+        <Member Name="AsText" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.StaticImageDashboardOrganizationItem">
+      <OwnMembers>
+        <Member Name="ImageName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Preview" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Xem Trước" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.StaticTextDashboardOrganizationItem">
+      <OwnMembers>
+        <Member Name="Text" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.ViewDashboardOrganizationItem" Caption="Xem">
+      <OwnMembers>
+        <Member Name="ActionsToolbarVisibility" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Criteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ObjectType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ViewDescriptor" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Xem" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Validation.AllContextsView.ContextValidationResult">
+      <OwnMembers>
+        <Member Name="BrokenRules" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Context" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ContextValidationOutcome" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="DisplayableValidationResultItems" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="State" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Validation.AllContextsView.DisplayableValidationResultItem">
+      <OwnMembers>
+        <Member Name="ContextCaption" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ContextId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ErrorMessage" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Outcome" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Rule" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="RuleName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="RuleProperties" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="State" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetCaption" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Validation.AllContextsView.ValidationResults">
+      <OwnMembers>
+        <Member Name="DisplayableValidationResultItems" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="HighlightErrors" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Results" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Workflow.Versioning.IUserActivityVersion">
+      <OwnMembers>
+        <Member Name="Version" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="WorkflowUniqueId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Xaml" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Workflow.Versioning.XpoUserActivityVersion">
+      <OwnMembers>
+        <Member Name="Version" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="WorkflowUniqueId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Xaml" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Workflow.Xpo.WFBaseObject">
+      <OwnMembers>
+        <Member Name="Oid" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Workflow.Xpo.XpoRunningWorkflowInstanceInfo">
+      <OwnMembers>
+        <Member Name="ActivityInstanceId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="State" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetObjectHandle" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TrackingRecords" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TrackingRecordVisualizationInfo" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="WorkflowName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="WorkflowUniqueId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Workflow.Xpo.XpoStartWorkflowRequest">
+      <OwnMembers>
+        <Member Name="TargetObjectKey" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetWorkflowUniqueId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Workflow.Xpo.XpoWorkflowDefinition">
+      <OwnMembers>
+        <Member Name="AutoStartWhenObjectFitsCriteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="AutoStartWhenObjectIsCreated" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Criteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="IsActive" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Name" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tên" />
+        <Member Name="TargetObjectType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Xaml" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Workflow.Xpo.XpoWorkflowInstanceControlCommandRequest">
+      <OwnMembers>
+        <Member Name="Command" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="CreatedOn" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Result" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetActivityInstanceId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetWorkflowUniqueId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Address" Caption="Địa Chỉ">
+      <OwnMembers>
+        <Member Name="City" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Thành Phố" />
+        <Member Name="Country" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Nước" />
+        <Member Name="FullAddress" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Địa Chỉ Đầy Đủ" />
+        <Member Name="StateProvince" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tỉnh" />
+        <Member Name="Street" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Đường" />
+        <Member Name="ZipPostal" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.BaseObject">
+      <OwnMembers>
+        <Member Name="Oid" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Country" Caption="Nước">
+      <OwnMembers>
+        <Member Name="Name" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tên" />
+        <Member Name="PhoneCode" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.FileAttachmentBase">
+      <OwnMembers>
+        <Member Name="File" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.FileData">
+      <OwnMembers>
+        <Member Name="FileName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Size" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.HCategory">
+      <OwnMembers>
+        <Member Name="Children" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Name" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tên" />
+        <Member Name="Parent" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Party">
+      <OwnMembers>
+        <Member Name="Address1" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Address2" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="DisplayName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tên Hiển Thị" />
+        <Member Name="PhoneNumbers" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Số Điện Thoại" />
+        <Member Name="Photo" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Person" Caption="Người">
+      <OwnMembers>
+        <Member Name="Birthday" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Ngày Sinh" />
+        <Member Name="Email" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="FirstName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Họ" />
+        <Member Name="FullName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tên Đầy Đủ" />
+        <Member Name="LastName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tên" />
+        <Member Name="MiddleName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tên Lót" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PhoneNumber" Caption="Số Điện Thoại">
+      <OwnMembers>
+        <Member Name="Number" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Party" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="PhoneType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.ReportDataV2" Caption="Báo Cáo">
+      <OwnMembers>
+        <Member Name="DataTypeCaption" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="DisplayName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tên Hiển Thị" />
+        <Member Name="IsInplaceReport" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="IsPredefined" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ParametersObjectType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleBaseProperties">
+      <OwnMembers>
+        <Member Name="CustomMessageTemplate" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Id" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="InvertResult" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateSkipNullOrEmptyValues" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Mẫu thông báo bỏ qua giá trị null hoặc rỗng" />
+        <Member Name="MessageTemplateTargetDoesNotSatisfyTargetCriteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Name" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tên" />
+        <Member Name="ResultType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="SkipNullOrEmptyValues" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Bỏ qua giá trị Null hoặc rỗng" />
+        <Member Name="TargetContextIDs" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetCriteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleCollectionPropertyProperties">
+      <OwnMembers>
+        <Member Name="MessageTemplateCollectionValidationMessageSuffix" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateTargetDoesNotSatisfyCollectionCriteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetCollectionOwnerType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetCollectionPropertyName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleCombinationOfPropertiesIsUniqueProperties">
+      <OwnMembers>
+        <Member Name="MessageTemplateCombinationOfPropertiesMustBeUnique" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetProperties" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleCriteriaProperties">
+      <OwnMembers>
+        <Member Name="Criteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustSatisfyCriteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="UsedProperties" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleFromBoolPropertyProperties">
+      <OwnMembers>
+        <Member Name="MessageTemplateMustBeTrue" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="UsedProperties" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleIsReferencedProperties">
+      <OwnMembers>
+        <Member Name="LooksFor" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeReferenced" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ReferencePropertyName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleObjectExistsProperties">
+      <OwnMembers>
+        <Member Name="Criteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="LooksFor" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustExist" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRulePropertyValueProperties">
+      <OwnMembers>
+        <Member Name="TargetPropertyName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleRangeProperties">
+      <OwnMembers>
+        <Member Name="MaximumValue" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MaximumValueExpression" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeInRange" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MinimumValue" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MinimumValueExpression" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleRegularExpressionProperties">
+      <OwnMembers>
+        <Member Name="MessageTemplateMustMatchPattern" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Pattern" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleRequiredFieldProperties">
+      <OwnMembers>
+        <Member Name="MessageTemplateMustNotBeEmpty" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="SkipNullOrEmptyValues" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Bỏ qua giá trị Null hoặc rỗng" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleSearchObjectProperties">
+      <OwnMembers>
+        <Member Name="CriteriaEvaluationBehavior" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="FoundObjectMessageFormat" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="FoundObjectMessagesSeparator" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="IncludeCurrentObject" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateFoundObjects" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleStringComparisonProperties">
+      <OwnMembers>
+        <Member Name="IgnoreCase" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeEqual" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeginWith" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustContain" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustEndWith" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustNotBeEqual" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="OperandValue" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="OperatorType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleSupportsCollectionAggregatesProperties">
+      <OwnMembers>
+        <Member Name="TargetCollectionAggregate" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleUniqueValueProperties">
+      <OwnMembers>
+        <Member Name="FoundObjectMessageFormat" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeUnique" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleValueComparisonProperties">
+      <OwnMembers>
+        <Member Name="MessageTemplateMustBeEqualToOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeGreaterThanOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeGreaterThanOrEqualToOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeLessThanOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeLessThanOrEqualToOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustNotBeEqualToOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="OperatorType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="RightOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="RightOperandExpression" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleBaseProperties">
+      <OwnMembers>
+        <Member Name="CustomMessageTemplate" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Id" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="InvertResult" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateCollectionValidationMessageSuffix" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateSkipNullOrEmptyValues" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Mẫu thông báo bỏ qua giá trị null hoặc rỗng" />
+        <Member Name="MessageTemplateTargetDoesNotSatisfyCollectionCriteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateTargetDoesNotSatisfyTargetCriteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Name" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Tên" />
+        <Member Name="ResultType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="SkipNullOrEmptyValues" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" Caption="Bỏ qua giá trị Null hoặc rỗng" />
+        <Member Name="TargetCollectionOwnerType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetCollectionPropertyName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetContextIDs" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetCriteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleCombinationOfPropertiesIsUniqueProperties">
+      <OwnMembers>
+        <Member Name="MessageTemplateCombinationOfPropertiesMustBeUnique" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetProperties" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleCriteriaProperties">
+      <OwnMembers>
+        <Member Name="Criteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustSatisfyCriteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="UsedProperties" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleFromBoolPropertyProperties">
+      <OwnMembers>
+        <Member Name="MessageTemplateMustBeTrue" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="UsedProperties" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleIsReferencedProperties">
+      <OwnMembers>
+        <Member Name="LooksFor" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeReferenced" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ReferencePropertyName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleObjectExistsProperties">
+      <OwnMembers>
+        <Member Name="Criteria" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="LooksFor" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustExist" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RulePropertyValueProperties">
+      <OwnMembers>
+        <Member Name="TargetPropertyName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleRangeProperties">
+      <OwnMembers>
+        <Member Name="MaximumValue" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MaximumValueExpression" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeInRange" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MinimumValue" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MinimumValueExpression" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetCollectionAggregate" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleRegularExpressionProperties">
+      <OwnMembers>
+        <Member Name="MessageTemplateMustMatchPattern" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Pattern" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleRequiredFieldProperties">
+      <OwnMembers>
+        <Member Name="MessageTemplateMustNotBeEmpty" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleSearchObjectProperties">
+      <OwnMembers>
+        <Member Name="CriteriaEvaluationBehavior" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="FoundObjectMessageFormat" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="FoundObjectMessagesSeparator" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="IncludeCurrentObject" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateFoundObjects" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleSetValidationResult">
+      <OwnMembers>
+        <Member Name="Results" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleSetValidationResultItem">
+      <OwnMembers>
+        <Member Name="ContextId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="DisplayObjectName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ErrorMessage" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Rule" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="RuleName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="State" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Target" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ValidationOutcome" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleSetValidationResultItemAggregate">
+      <OwnMembers>
+        <Member Name="AggregatedResults" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleStringComparisonProperties">
+      <OwnMembers>
+        <Member Name="IgnoreCase" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeEqual" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeginWith" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustContain" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustEndWith" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustNotBeEqual" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="OperandValue" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="OperatorType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleUniqueValueProperties">
+      <OwnMembers>
+        <Member Name="MessageTemplateMustBeUnique" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetPropertyName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleValueComparisonProperties">
+      <OwnMembers>
+        <Member Name="MessageTemplateMustBeEqualToOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeGreaterThanOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeGreaterThanOrEqualToOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeLessThanOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustBeLessThanOrEqualToOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MessageTemplateMustNotBeEqualToOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="OperatorType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="RightOperand" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="RightOperandExpression" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TargetCollectionAggregate" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Workflow.Xpo.XpoInstanceKey">
+      <OwnMembers>
+        <Member Name="InstanceId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="KeyId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Workflow.Xpo.XpoTrackingRecord">
+      <OwnMembers>
+        <Member Name="ActivityId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Data" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="DateTime" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="InstanceId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Workflow.Xpo.XpoWorkflowInstance">
+      <OwnMembers>
+        <Member Name="ExpirationDateTime" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="InstanceId" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Owner" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Status" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Xpo.XPObject">
+      <OwnMembers>
+        <Member Name="Oid" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Xpo.XPObjectType">
+      <OwnMembers>
+        <Member Name="Oid" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.Branch">
+      <OwnMembers>
+        <Member Name="BranchName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Description" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.DataTypeTimekeeping">
+      <OwnMembers>
+        <Member Name="DataType" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TypeData" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.DefaultValueTimekeeping">
+      <OwnMembers>
+        <Member Name="Shift" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ThoiGianRa" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ThoiGianVao" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TongSoGioLam" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.Department">
+      <OwnMembers>
+        <Member Name="DepartmentName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Description" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.Employee">
+      <OwnMembers>
+        <Member Name="Branch" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Department" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="EmployeeCode" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="LuongCoBan" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="MaSoThue" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Position" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TikiCode" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.Holiday">
+      <OwnMembers>
+        <Member Name="Description" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="EndDate" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="HolidayTypes" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="StartDate" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.HolidayTypes">
+      <OwnMembers>
+        <Member Name="Description" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="HolidayTypesName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="IsPublicHoliday" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.Parameter">
+      <OwnMembers>
+        <Member Name="SoGioToiThieuTinhTangCa" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ThoiGianTinhCaDem" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.Position">
+      <OwnMembers>
+        <Member Name="Description" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="PositionName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.Salaries">
+      <OwnMembers>
+        <Member Name="Description" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="File" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.Shift">
+      <OwnMembers>
+        <Member Name="Description" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ShiftName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.Timekeeping">
+      <OwnMembers>
+        <Member Name="Date" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Employee" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Name" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="NgayCongThucTe" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="NgayTinhCong" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Shift" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="SoGioTangCaNL" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="SoGioTangCaNN" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="SoGioTangCaNNCaDem" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="SoGioTangCaNT" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="SoGioTangCaNTCaDem" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="SoPhutDiTre" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="SoPhutVeSom" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ThoiGianRa" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="ThoiGianVao" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TimekeepingName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TongSoGioLam" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.TimekeepingMonth">
+      <OwnMembers>
+        <Member Name="DataTypeTimekeeping" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Employee" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay1" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay10" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay11" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay12" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay13" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay14" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay15" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay16" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay17" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay18" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay19" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay2" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay20" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay21" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay22" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay23" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay24" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay25" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay26" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay27" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay28" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay29" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay3" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay30" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay31" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay4" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay5" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay6" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay7" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay8" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Ngay9" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="Sum" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="TimekeepingName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+    <Class Name="EasyHRM.Module.BusinessObjects.TimekeepingName">
+      <OwnMembers>
+        <Member Name="EndDate" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="StartDate" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+        <Member Name="timekeepingName" CaptionForTrue="" CaptionForFalse="" PredefinedValues="" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="Captions" Value="">
+      <LocalizationItem Name="View" Value="Xem" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="ChartModule" Value="" />
+    <LocalizationGroup Name="Confirmations" Value="">
+      <LocalizationItem Name="Cancel" Value="Bạn có muốn hủy những thay đổi của bạn?" />
+      <LocalizationItem Name="Save" Value="Bạn có muốn lưu những thay đổi?" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="DashboardOrganizationItems" Value="" />
+    <LocalizationGroup Name="DialogButtons" Value="">
+      <LocalizationItem Name="Cancel" Value="Hủy" />
+      <LocalizationItem Name="Close" Value="Đóng" />
+      <LocalizationItem Name="No" Value="Không Đồng Ý" />
+      <LocalizationItem Name="OK" Value="Đồng Ý" />
+      <LocalizationItem Name="Yes" Value="Đồng Ý" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Enums" Value="">
+      <LocalizationGroup Name="DevExpress.Data.Filtering.Aggregate">
+        <LocalizationItem Name="Sum" Value="Tổng" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Validation.AllContextsView.IsValid">
+        <LocalizationItem Name="Invalid" Value="Không Có Giá Trị" />
+        <LocalizationItem Name="Valid" Value="Có Giá Trị" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Workflow.WorkflowControlCommand">
+        <LocalizationItem Name="Cancel" Value="Hủy" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.StringComparisonType">
+        <LocalizationItem Name="Contains" Value="Chứa" />
+        <LocalizationItem Name="EndsWith" Value="Kết Thúc Với" />
+        <LocalizationItem Name="Equals" Value="Bằng Nhau" />
+        <LocalizationItem Name="NotEquals" Value="Khác Nhau" />
+        <LocalizationItem Name="StartsWith" Value="Bắt Đầu Với" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.ValidationOutcome">
+        <LocalizationItem Name="Error" Value="Lỗi" />
+        <LocalizationItem Name="Information" Value="Thông Tin" />
+        <LocalizationItem Name="Skipped" Value="Bỏ Qua" />
+        <LocalizationItem Name="Valid" Value="Có Giá Trị" />
+        <LocalizationItem Name="Warning" Value="Cảnh Báo" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.ValidationResultType">
+        <LocalizationItem Name="Error" Value="Lỗi" />
+        <LocalizationItem Name="Information" Value="Thông Tin" />
+        <LocalizationItem Name="Warning" Value="Cảnh Báo" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.ValidationState" Value="Trạng Thái Hợp Lệ">
+        <LocalizationItem Name="Invalid" Value="Không Có Giá Trị" />
+        <LocalizationItem Name="Skipped" Value="Bỏ Qua" />
+        <LocalizationItem Name="Valid" Value="Có Giá Trị" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.ValueComparisonType">
+        <LocalizationItem Name="Equals" Value="Bằng Nhau" />
+        <LocalizationItem Name="GreaterThan" Value="Lớn Hơn" />
+        <LocalizationItem Name="GreaterThanOrEqual" Value="Lớn Hơn Hoặc Bằng" />
+        <LocalizationItem Name="LessThan" Value="Nhỏ Hơn" />
+        <LocalizationItem Name="LessThanOrEqual" Value="Nhỏ Hơn Hoặc Bằng" />
+        <LocalizationItem Name="NotEquals" Value="Khác Nhau" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.XtraBars.Docking.DockVisibility" Value="">
+        <LocalizationItem Name="AutoHide" Value="Tự Động Ẩn" />
+        <LocalizationItem Name="Hidden" Value="Ẩn" />
+        <LocalizationItem Name="Visible" Value="Hiện" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="System.Activities.ActivityInstanceState">
+        <LocalizationItem Name="Canceled" Value="Hủy" />
+        <LocalizationItem Name="Closed" Value="Đóng" />
+        <LocalizationItem Name="Executing" Value="Thực Thi" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Exceptions" Value="">
+      <LocalizationGroup Name="SystemExceptions" Value="" />
+      <LocalizationGroup Name="UserVisibleExceptions" Value="">
+        <LocalizationGroup Name="Security" Value="">
+          <LocalizationItem Name="LoginFailed" Value="Đăng nhập thất bại] '{0}'. {1}" />
+          <LocalizationItem Name="NewPasswordIsEqualToOldPassword" Value="Mật khẩu mới giống mật khẩu cũ." />
+          <LocalizationItem Name="OldPasswordIsWrong" Value="Mật khẩu cũ không đúng." />
+          <LocalizationItem Name="PasswordsAreDifferent" Value="Mật khẩu khác nhau." />
+          <LocalizationItem Name="UserNameIsEmpty" Value="Tên tài khoản không được để trống." />
+        </LocalizationGroup>
+        <LocalizationItem Name="TheFollowingErrorOccurred" Value="Đã xảy ra lỗi sau đây:" />
+        <LocalizationItem Name="UserFriendlyConnectionFailedException" Value="Kết nối database không thành công. Vui lòng liên hệ nhà phát triển." />
+        <LocalizationGroup Name="Validation" Value="" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="FrameTemplates" Value="" />
+    <LocalizationGroup Name="Messages" Value="">
+      <LocalizationItem Name="User" Value="Người Dùng: {0}" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Namespaces" Value="" />
+    <LocalizationGroup Name="OpenSaveDialogFilters" Value="" />
+    <LocalizationGroup Name="PivotGridModule" Value="" />
+    <LocalizationGroup Name="Ribbon" Value="" />
+    <LocalizationGroup Name="Security" Value="" />
+    <LocalizationGroup Name="Texts" Value="">
+      <LocalizationItem Name="CaptionForFalse" Value="" />
+      <LocalizationItem Name="CaptionForTrue" Value="" />
+      <LocalizationItem Name="Error" Value="Lỗi" />
+      <LocalizationItem Name="Warning" Value="Cảnh Báo" />
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems RelatedReportsGroupCaption="Báo Cáo">
+    <Items>
+      <Item Id="Default" Caption="Mặc Định" />
+      <Item Id="Employee Manager" Caption="Quản Lý Nhân Viên" />
+      <Item Id="Reports" Caption="Báo Cáo">
+        <Items>
+          <Item Id="ReportsV2" Caption="Báo Cáo" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Validation>
+    <Contexts>
+      <ValidationContext Id="Save" Caption="Lưu" />
+    </Contexts>
+    <Rules>
+      <RuleRequiredField Id="{0FC8E8B2-0BD5-4EEC-A0A0-5593BB139F12}" CustomMessageTemplate="" />
+      <RuleFromBoolProperty Id="{3D2C3E9B-58BB-4788-A9BD-F7550FE147A8}" CustomMessageTemplate="" />
+      <RuleUniqueValue Id="{5F6B2B07-2A68-4BB6-8AD9-5059B3D23163}" CustomMessageTemplate="" />
+      <RuleRequiredField Id="{E51ABF7D-8DAE-47F5-904E-F2113B687C72}" CustomMessageTemplate="" />
+    </Rules>
+  </Validation>
+  <Views>
+    <DetailView Id="AboutInfo_DetailView">
+      <Items>
+        <StaticText Id="AboutText" Caption="" />
+        <StaticImage Id="Logo" Caption="" />
+      </Items>
+      <Layout>
+        <LayoutItem Id="Logo" ToolTip="" ToolTipTitle="" />
+        <LayoutItem Id="AboutText" ToolTip="" ToolTipTitle="" />
+      </Layout>
+    </DetailView>
+    <DetailView Id="ActionContainerDashboardOrganizationItem_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="ActionContainerDashboardOrganizationItem" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ActionContainerDashboardOrganizationItem_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="ActionContainerDashboardOrganizationItem_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="ActionContainerDescriptor_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="ActionContainerDescriptor" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ActionContainerDescriptor_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="ActionContainerDescriptor_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Address_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="Address" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Address_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Address_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="BaseObject_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="BaseObject_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Branch_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="Branch" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="Address" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="Address_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="Address_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Branch_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Branch_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="ContextValidationResult_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="ContextValidationResult" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" ToolTip="" ToolTipTitle="" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ContextValidationResult_DisplayableValidationResultItems_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="ContextValidationResult_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="ContextValidationResult_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Country_DetailView" Caption="Nước">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="Country" ToolTip="" ToolTipTitle="" Caption="Nước'" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Country_ListView" Caption="Nước">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Country_LookupListView" Caption="Nước">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="CriteriaProvider_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="CriteriaProvider" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DashboardCreationInfo_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="DashboardCreationInfo" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="ViewItems" Caption="Xem Các Mục" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DashboardCreationInfo_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="DashboardCreationInfo_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="DashboardCreationInfo_ViewItems_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="DashboardOrganizationItem_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="" />
+      </Layout>
+    </DetailView>
+    <ListView Id="DashboardOrganizationItem_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="DashboardOrganizationItem_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="DashboardOrganizer_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="" />
+      </Layout>
+    </DetailView>
+    <ListView Id="DashboardOrganizer_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="DashboardOrganizer_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="DashboardOrganizer_ViewItems_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="DashboardViewItemDescriptor_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="DashboardViewItemDescriptor" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DashboardViewItemDescriptor_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="DashboardViewItemDescriptor_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="DataTypeTimekeeping_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="DataTypeTimekeeping" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DataTypeTimekeeping_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="DataTypeTimekeeping_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="DefaultValueTimekeeping_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="DefaultValueTimekeeping" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DefaultValueTimekeeping_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="DefaultValueTimekeeping_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Department_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="Department" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Department_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Department_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="DiagnosticInfoObject_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SizeableEditors" ToolTip="" ToolTipTitle="" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DiagnosticInfoObject_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="DiagnosticInfoObject_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="DisplayableValidationResultItem_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="DisplayableValidationResultItem" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="DisplayableValidationResultItem_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="DisplayableValidationResultItem_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DisplayableValidationResultItem_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="DisplayableValidationResultItem_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Employee_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="Employee" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="Auto5381af65-7f82-49db-be19-a205d8b91d07" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="Employee_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="Employee_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="Person" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="Person_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="Person_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="Party" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Employee_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Employee_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="FileAttachmentBase_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="FileAttachmentBase" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="FileAttachmentBase_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="FileAttachmentBase_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="FileData_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="FileData" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" ToolTip="" ToolTipTitle="" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="FileData_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="FileData_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="HCategory_Children_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="HCategory_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="HCategory" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="HCategory_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="HCategory_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Holiday_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="Holiday" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Holiday_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Holiday_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="HolidayTypes_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="HolidayTypes" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="HolidayTypes_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="HolidayTypes_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleBaseProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleBaseProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleBaseProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleCollectionPropertyProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleCollectionPropertyProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleCollectionPropertyProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleCombinationOfPropertiesIsUniqueProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleCombinationOfPropertiesIsUniqueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleSearchObjectProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleSearchObjectProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleSearchObjectProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleCombinationOfPropertiesIsUniqueProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleCombinationOfPropertiesIsUniqueProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleCriteriaProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleCriteriaProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleCriteriaProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleCriteriaProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleFromBoolPropertyProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleFromBoolPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleFromBoolPropertyProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleFromBoolPropertyProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleIsReferencedProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleIsReferencedProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleSearchObjectProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleSearchObjectProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleSearchObjectProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleIsReferencedProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleIsReferencedProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleObjectExistsProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleObjectExistsProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleSearchObjectProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleSearchObjectProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleSearchObjectProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleObjectExistsProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleObjectExistsProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRulePropertyValueProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRulePropertyValueProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRulePropertyValueProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleRangeProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleRangeProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleRangeProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleRangeProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleSupportsCollectionAggregatesProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleRangeProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleRangeProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleRegularExpressionProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleRegularExpressionProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleRegularExpressionProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleRegularExpressionProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleRequiredFieldProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleRequiredFieldProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleRequiredFieldProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleRequiredFieldProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleSearchObjectProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleSearchObjectProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleSearchObjectProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleSearchObjectProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleSearchObjectProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleSearchObjectProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleStringComparisonProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleStringComparisonProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleStringComparisonProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleStringComparisonProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="IRulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleStringComparisonProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleStringComparisonProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleSupportsCollectionAggregatesProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleSupportsCollectionAggregatesProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleSupportsCollectionAggregatesProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleSupportsCollectionAggregatesProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleUniqueValueProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleUniqueValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleSearchObjectProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="IRulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleUniqueValueProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleUniqueValueProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IRuleValueComparisonProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IRuleValueComparisonProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleValueComparisonProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleValueComparisonProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleSupportsCollectionAggregatesProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleCollectionPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="IRuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="IRuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="IRuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IRuleValueComparisonProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IRuleValueComparisonProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="IUserActivityVersion_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="IUserActivityVersion" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" ToolTip="" ToolTipTitle="" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IUserActivityVersion_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="IUserActivityVersion_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Parameter_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="Parameter" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Parameter_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Parameter_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Party_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="Party" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Party_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Party_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Party_PhoneNumbers_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="PersistentBase_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="PersistentBase_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Person_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="Person" ToolTip="" ToolTipTitle="" Caption="Người">
+            <LayoutGroup Id="Person_col1" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="Person_col2" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Person_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Person_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="PhoneNumber_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="PhoneNumber" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PhoneNumber_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="PhoneNumber_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Position_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="Position" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Position_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Position_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="PredefinedRepotDataContainer_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="PredefinedRepotDataContainer" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="PredefinedRepotDataContainer_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="PredefinedRepotDataContainer_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PredefinedRepotDataContainer_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="PredefinedRepotDataContainer_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="ProcessDataLockingInfoDialogObject_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="ProcessDataLockingInfoDialogObject_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="ProcessDataLockingInfoMergeDialog_DetailView" Caption="Cảnh Báo">
+      <Items>
+        <StaticText Id="Message" Caption="" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutItem Id="Message" ToolTip="" ToolTipTitle="" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ProcessDataLockingInfoRefreshDialog_DetailView" Caption="Cảnh Báo">
+      <Items>
+        <StaticText Id="Message" Caption="" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutItem Id="Message" ToolTip="" ToolTipTitle="" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ReportDataV2_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="ReportDataV2" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ReportDataV2_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="ReportDataV2_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleBaseProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleBaseProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleBaseProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleCombinationOfPropertiesIsUniqueProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleCombinationOfPropertiesIsUniqueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RuleSearchObjectProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleSearchObjectProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleSearchObjectProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleCombinationOfPropertiesIsUniqueProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleCombinationOfPropertiesIsUniqueProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleCriteriaProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleCriteriaProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleCriteriaProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleCriteriaProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleFromBoolPropertyProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleFromBoolPropertyProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleFromBoolPropertyProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleFromBoolPropertyProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleIsReferencedProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleIsReferencedProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RuleSearchObjectProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleSearchObjectProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleSearchObjectProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleIsReferencedProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleIsReferencedProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleObjectExistsProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleObjectExistsProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RuleSearchObjectProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleSearchObjectProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleSearchObjectProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleObjectExistsProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleObjectExistsProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RulePropertyValueProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RulePropertyValueProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RulePropertyValueProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleRangeProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleRangeProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleRangeProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleRangeProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="RulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleRangeProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleRangeProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleRegularExpressionProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleRegularExpressionProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleRegularExpressionProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleRegularExpressionProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleRequiredFieldProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleRequiredFieldProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleRequiredFieldProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleRequiredFieldProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleSearchObjectProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleSearchObjectProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleSearchObjectProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleSearchObjectProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleSearchObjectProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleSearchObjectProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleSetValidationResult_ByTarget_Error_DetailView">
+      <Items>
+        <StaticImage Id="ValidationResultsImage" Caption="" />
+        <StaticText Id="ValidationResultsText" Caption="" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="Static" ToolTip="" ToolTipTitle="">
+            <LayoutItem Id="ValidationResultsImage" ToolTip="" ToolTipTitle="" />
+            <LayoutItem Id="ValidationResultsText" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="RuleSetValidationResult_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="" />
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleSetValidationResult_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleSetValidationResult_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleSetValidationResult_Results_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleSetValidationResultItem_ByTarget_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleSetValidationResultItem_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleSetValidationResultItem" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleSetValidationResultItem_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleSetValidationResultItem_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleSetValidationResultItem_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleSetValidationResultItem_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleSetValidationResultItemAggregate_AggregatedResults_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleSetValidationResultItemAggregate_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleSetValidationResultItem" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleSetValidationResultItem_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleSetValidationResultItem_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleSetValidationResultItemAggregate_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleSetValidationResultItemAggregate_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleStringComparisonProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleStringComparisonProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleStringComparisonProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleStringComparisonProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="RulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleStringComparisonProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleStringComparisonProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleUniqueValueProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleUniqueValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RuleSearchObjectProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleSearchObjectProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleSearchObjectProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleUniqueValueProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleUniqueValueProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="RuleValueComparisonProperties_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="RuleValueComparisonProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleValueComparisonProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleValueComparisonProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+            <LayoutGroup Id="RulePropertyValueProperties" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="RuleBaseProperties" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="RuleBaseProperties_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="RuleBaseProperties_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleValueComparisonProperties_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="RuleValueComparisonProperties_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Salaries_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="Salaries" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Salaries_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Salaries_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Script_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SizeableEditors" ToolTip="" ToolTipTitle="" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Script_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Script_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Shift_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="Shift" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Shift_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Shift_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="StaticImageDashboardOrganizationItem_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="StaticImageDashboardOrganizationItem" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="StaticImageDashboardOrganizationItem_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="StaticImageDashboardOrganizationItem_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="StaticTextDashboardOrganizationItem_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SizeableEditors" ToolTip="" ToolTipTitle="" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="StaticTextDashboardOrganizationItem_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="StaticTextDashboardOrganizationItem_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="Timekeeping_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="Timekeeping" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="Timekeeping_col1" ToolTip="" ToolTipTitle="">
+                <LayoutGroup Id="Item1" ToolTip="" ToolTipTitle="" />
+              </LayoutGroup>
+              <LayoutGroup Id="Timekeeping_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Timekeeping_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="Timekeeping_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="TimekeepingMonth_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="TimekeepingMonth" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="TimekeepingMonth_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="TimekeepingMonth_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TimekeepingMonth_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="TimekeepingMonth_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="TimekeepingName_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="TimekeepingName" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TimekeepingName_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="TimekeepingName_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="ValidationResults_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="ValidationResults" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" Caption="" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ValidationResults_DisplayableValidationResultItems_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="ValidationResults_Error_DetailView">
+      <Items>
+        <StaticImage Id="ValidationResultsImage" Caption="" />
+        <StaticText Id="ValidationResultsText" Caption="" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="Static" ToolTip="" ToolTipTitle="">
+            <LayoutItem Id="ValidationResultsImage" ToolTip="" ToolTipTitle="" />
+            <LayoutItem Id="ValidationResultsText" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ValidationResults_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="ValidationResults_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="ValidationResults_Passed_DetailView">
+      <Items>
+        <StaticImage Id="ValidationResultsImage" Caption="" />
+        <StaticText Id="ValidationResultsText" Caption="" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="Static" ToolTip="" ToolTipTitle="">
+            <LayoutItem Id="ValidationResultsImage" ToolTip="" ToolTipTitle="" />
+            <LayoutItem Id="ValidationResultsText" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ValidationResults_Results_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="ViewDashboardOrganizationItem_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="ViewDashboardOrganizationItem" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ViewDashboardOrganizationItem_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="ViewDashboardOrganizationItem_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="WFBaseObject_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="WFBaseObject_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XPBaseObject_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XPBaseObject_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XPCustomObject_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XPCustomObject_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="XPObject_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="XPObject" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="XPObject_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XPObject_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XPObjectType_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XPObjectType_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="XpoInstanceKey_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="XpoInstanceKey" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="XPObject" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="XpoInstanceKey_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XpoInstanceKey_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="XpoRunningWorkflowInstanceInfo_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="XpoRunningWorkflowInstanceInfo" ToolTip="" ToolTipTitle="">
+              <LayoutGroup Id="XpoRunningWorkflowInstanceInfo_col1" ToolTip="" ToolTipTitle="" />
+              <LayoutGroup Id="XpoRunningWorkflowInstanceInfo_col2" ToolTip="" ToolTipTitle="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="XpoRunningWorkflowInstanceInfo_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XpoRunningWorkflowInstanceInfo_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XpoRunningWorkflowInstanceInfo_TrackingRecords_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="XpoStartWorkflowRequest_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="XpoStartWorkflowRequest" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="XpoStartWorkflowRequest_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XpoStartWorkflowRequest_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="XpoTrackingRecord_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="XpoTrackingRecord" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="XPObject" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" ToolTip="" ToolTipTitle="" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="XpoTrackingRecord_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XpoTrackingRecord_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="XpoUserActivityVersion_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="XpoUserActivityVersion" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" ToolTip="" ToolTipTitle="" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="XpoUserActivityVersion_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XpoUserActivityVersion_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="XpoWorkflowDefinition_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main_Copy" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SizeableEditors" ToolTip="" ToolTipTitle="">
+            <TabbedGroup Id="Item1" Caption="">
+              <LayoutGroup Id="XpoWorkflowDefinition" ToolTip="" ToolTipTitle="">
+                <LayoutGroup Id="Item4" ToolTip="" ToolTipTitle="">
+                  <LayoutGroup Id="3a4ca40e-a05e-4539-a048-6948acb2783d" ToolTip="" ToolTipTitle="" />
+                </LayoutGroup>
+                <LayoutGroup Id="Item2" ToolTip="" ToolTipTitle="">
+                  <LayoutGroup Id="Item3" ToolTip="" ToolTipTitle="" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item2" ToolTip="" ToolTipTitle="" />
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="XpoWorkflowDefinition_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XpoWorkflowDefinition_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="XpoWorkflowInstance_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="XpoWorkflowInstance" ToolTip="" ToolTipTitle="" />
+            <LayoutGroup Id="XPObject" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="XpoWorkflowInstance_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XpoWorkflowInstance_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <DetailView Id="XpoWorkflowInstanceControlCommandRequest_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ToolTip="" ToolTipTitle="">
+          <LayoutGroup Id="SimpleEditors" ToolTip="" ToolTipTitle="">
+            <LayoutGroup Id="XpoWorkflowInstanceControlCommandRequest" ToolTip="" ToolTipTitle="" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" ToolTip="" ToolTipTitle="" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="XpoWorkflowInstanceControlCommandRequest_ListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+    <ListView Id="XpoWorkflowInstanceControlCommandRequest_LookupListView">
+      <ChartSettings Settings="" />
+      <PivotSettings Settings="" LayoutSettings="" ChartSettings="" />
+    </ListView>
+  </Views>
+</Application>

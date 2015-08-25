@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views>
+    <ListView Id="TimekeepingMonth_ListView">
+      <Columns>
+        <ColumnInfo Id="Ngay30" Caption="24/08" />
+        <ColumnInfo Id="Ngay31" Caption="25/08" />
+        <ColumnInfo Id="Ngay1" Caption="26/06" />
+        <ColumnInfo Id="Ngay2" Caption="27/06" />
+        <ColumnInfo Id="Ngay3" Caption="28/06" />
+        <ColumnInfo Id="Ngay4" Caption="29/06" />
+        <ColumnInfo Id="Ngay5" Caption="30/06" />
+        <ColumnInfo Id="Ngay6" Caption="01/07" />
+        <ColumnInfo Id="Ngay7" Caption="02/07" />
+        <ColumnInfo Id="Ngay8" Caption="03/07" />
+        <ColumnInfo Id="Ngay9" Caption="04/07" />
+        <ColumnInfo Id="Ngay10" Caption="05/07" />
+        <ColumnInfo Id="Ngay11" Caption="06/07" />
+        <ColumnInfo Id="Ngay12" Caption="07/07" />
+        <ColumnInfo Id="Ngay13" Caption="08/07" />
+        <ColumnInfo Id="Ngay14" Caption="09/07" />
+        <ColumnInfo Id="Ngay15" Caption="10/07" />
+        <ColumnInfo Id="Ngay16" Caption="11/07" />
+        <ColumnInfo Id="Ngay17" Caption="12/07" />
+        <ColumnInfo Id="Ngay18" Caption="13/07" />
+        <ColumnInfo Id="Ngay19" Caption="14/07" />
+        <ColumnInfo Id="Ngay20" Caption="15/07" />
+        <ColumnInfo Id="Ngay21" Caption="16/07" />
+        <ColumnInfo Id="Ngay22" Caption="17/07" />
+        <ColumnInfo Id="Ngay23" Caption="18/07" />
+        <ColumnInfo Id="Ngay24" Caption="19/07" />
+        <ColumnInfo Id="Ngay25" Caption="20/07" />
+        <ColumnInfo Id="Ngay26" Caption="21/07" />
+        <ColumnInfo Id="Ngay27" Caption="22/07" />
+        <ColumnInfo Id="Ngay28" Caption="23/07" />
+        <ColumnInfo Id="Ngay29" Caption="24/07" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

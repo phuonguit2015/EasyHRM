@@ -41,6 +41,15 @@ namespace EasyHRM.Win {
             catch(Exception e) {
                 winApplication.HandleException(e);
             }
+
+            //
+            winApplication.CustomizeLanguage +=
+               new EventHandler<CustomizeLanguageEventArgs>(application_MyLanguage);
+        }
+
+        private static void application_MyLanguage(object sender, CustomizeLanguageEventArgs e)
+        {
+            e.LanguageName = "vi";
         }
     }
 }

@@ -37,10 +37,11 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\EasyHRM.Win\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -212,6 +213,12 @@
     <Compile Include="Controllers\ShowDetailViewFromListViewController.Designer.cs">
       <DependentUpon>ShowDetailViewFromListViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\TimekeepingDetailViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\TimekeepingDetailViewController.Designer.cs">
+      <DependentUpon>TimekeepingDetailViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\TimekeepingMonthViewController.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -244,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controllers\Salaries.resx">
       <DependentUpon>Salaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\TimekeepingDetailViewController.resx">
+      <DependentUpon>TimekeepingDetailViewController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controllers\TimekeepingMonthViewController.resx">
       <DependentUpon>TimekeepingMonthViewController.cs</DependentUpon>
@@ -285,6 +295,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes1.xml">
       <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
       <SubType>Designer</SubType>
     </None>

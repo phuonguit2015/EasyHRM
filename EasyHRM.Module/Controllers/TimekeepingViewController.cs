@@ -110,10 +110,7 @@ namespace EasyHRM.Module.Controllers
             base.OnDeactivated();
         }
 
-        private void propertyEditor_ControlCreated(object sender, EventArgs e)
-        {
-            InitNullText((PropertyEditor)sender);
-        }
+     
         private void InitNullText(PropertyEditor propertyEditor)
         {
             ((BaseEdit)propertyEditor.Control).Properties.NullText = CaptionHelper.NullValueText;
@@ -125,27 +122,9 @@ namespace EasyHRM.Module.Controllers
             f.ShowDialog();
         }
 
-        private void acFilterByEmployeeCode_Execute(object sender, ParametrizedActionExecuteEventArgs e)
-        {
-            string paramValue = e.ParameterCurrentValue as string;
-            if (!string.IsNullOrEmpty(paramValue))
-            {
-                paramValue = "%" + paramValue + "%";
-                if ((View is DevExpress.ExpressApp.ListView) & (View.ObjectTypeInfo.Type == typeof(Timekeeping)))
-                {
-                    ((DevExpress.ExpressApp.ListView)View).CollectionSource.Criteria["Filter1"] = new BinaryOperator(
-                       "Employee.EmployeeCode", paramValue, BinaryOperatorType.Like);
-                }
-            }
-            else
-            {
-                ((DevExpress.ExpressApp.ListView)View).CollectionSource.Criteria.Clear();
-            }
-           
-        }
-
+       
         private void CreateNewRowTimekeeping(Session session, string value,
-            Guid loaiDuLieuChamCongOid, Guid tenBangChamCongOid, Guid nhanVienOid, int index, ref List<string> strArr)
+            Guid loaiDuLieuChamCongOid, Guid tenBangChamCongOid, Guid nhanVienOid, Guid PhongBanOid, int index, ref List<string> strArr)
         {
             string s = string.Format("SELECT * FROM \"TimekeepingMonth\" WHERE" +
                     "\"TimekeepingName\" = '{0}' AND \"Employee\" = '{1}' AND \"DataTypeTimekeeping\" = '{2}'",
@@ -162,8 +141,8 @@ namespace EasyHRM.Module.Controllers
                     try
                     {
 
-                        s = string.Format("INSERT INTO \"TimekeepingMonth\" (\"Oid\",\"TimekeepingName\", \"Employee\", \"DataTypeTimekeeping\", \"Ngay" + index.ToString() + "\")" +
-                        "VALUES ('{4}','{0}','{1}','{2}','{3}')", tenBangChamCongOid, nhanVienOid, loaiDuLieuChamCongOid, value, id);
+                        s = string.Format("INSERT INTO \"TimekeepingMonth\" (\"Oid\",\"TimekeepingName\", \"Employee\", \"Department\", \"DataTypeTimekeeping\", \"Ngay" + index.ToString() + "\")" +
+                        "VALUES ('{4}','{0}','{1}','{2}','{3}')", tenBangChamCongOid, nhanVienOid, PhongBanOid, loaiDuLieuChamCongOid, value, id);
                         session.ExecuteNonQuery(s);
                         break;
                     }
@@ -176,15 +155,16 @@ namespace EasyHRM.Module.Controllers
             }
             else
             {
-                strArr.Add(string.Format("UPDATE \"TimekeepingMonth\" SET \"Ngay" + index.ToString() + "\" = '{3}', \"OptimisticLockField\" = null, \"GCRecord\" = null WHERE" +
+                strArr.Add(string.Format("UPDATE \"TimekeepingMonth\" SET \"Ngay" + index.ToString() + "\" = '{3}', \"Department\" = '{4}', \"OptimisticLockField\" = null, \"GCRecord\" = null WHERE " +
                     "\"TimekeepingName\" = '{0}' AND \"Employee\" = '{1}' AND \"DataTypeTimekeeping\" = '{2}'",
-                tenBangChamCongOid, nhanVienOid, loaiDuLieuChamCongOid, value));                
+                tenBangChamCongOid, nhanVienOid, loaiDuLieuChamCongOid, value,PhongBanOid));                
             }
          
         }
 
         private void ImportToTimekeepingMonth_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
+
             // Khởi tạo giá trị dữ liệu chấm công
             List<string> listLoaiDuLieuChamCong = new List<string>
             {
@@ -251,31 +231,31 @@ namespace EasyHRM.Module.Controllers
                 TimekeepingName tn = session.FindObject<TimekeepingName>(new BinaryOperator("timekeepingName", tempNote.TimekeepingName.timekeepingName));
                 TimeSpan ts = tempNote.Date - tn.StartDate;
                 int index = ts.Days + 1;
-                
-                CreateNewRowTimekeeping(session, tempNote.ThoiGianVao.ToString("HH:mm"), thoiGianVao.Oid, tempNote.TimekeepingName.Oid,
-                    tempNote.Employee.Oid, index, ref strArr);
-                CreateNewRowTimekeeping(session, tempNote.ThoiGianRa.ToString("HH:mm"), thoiGianRa.Oid, tempNote.TimekeepingName.Oid,
-                   tempNote.Employee.Oid, index, ref strArr);
+              
+                CreateNewRowTimekeeping(session, tempNote.ThoiGianVao.ToString(@"hh\:mm"), thoiGianVao.Oid, tempNote.TimekeepingName.Oid,
+                    tempNote.Employee.Oid, tempNote.Employee.Department.Oid, index, ref strArr);
+                CreateNewRowTimekeeping(session, tempNote.ThoiGianRa.ToString(@"hh\:mm"), thoiGianRa.Oid, tempNote.TimekeepingName.Oid,
+                   tempNote.Employee.Oid, tempNote.Employee.Department.Oid, index, ref strArr);                
                 CreateNewRowTimekeeping(session, tempNote.SoGioTangCaNL.ToString(), soGioTangCaNL.Oid, tempNote.TimekeepingName.Oid,
-                   tempNote.Employee.Oid, index, ref strArr);
+                   tempNote.Employee.Oid, tempNote.Employee.Department.Oid, index, ref strArr);
                 CreateNewRowTimekeeping(session, tempNote.SoGioTangCaNN.ToString(), soGioTangCaNN.Oid, tempNote.TimekeepingName.Oid,
-                   tempNote.Employee.Oid, index, ref strArr);
+                   tempNote.Employee.Oid, tempNote.Employee.Department.Oid, index, ref strArr);
                 CreateNewRowTimekeeping(session, tempNote.SoGioTangCaNNCaDem.ToString(), soGioTangCaNNCaDem.Oid, tempNote.TimekeepingName.Oid,
-                   tempNote.Employee.Oid, index, ref strArr);
+                   tempNote.Employee.Oid, tempNote.Employee.Department.Oid, index, ref strArr);
                 CreateNewRowTimekeeping(session, tempNote.SoGioTangCaNT.ToString(), soGioTangCaNT.Oid, tempNote.TimekeepingName.Oid,
-                   tempNote.Employee.Oid, index, ref strArr);
+                   tempNote.Employee.Oid, tempNote.Employee.Department.Oid, index, ref strArr);
                 CreateNewRowTimekeeping(session, tempNote.SoGioTangCaNTCaDem.ToString(), soGioTangCaNTCaDem.Oid, tempNote.TimekeepingName.Oid,
-                   tempNote.Employee.Oid, index, ref strArr);
+                   tempNote.Employee.Oid, tempNote.Employee.Department.Oid, index, ref strArr);
                 CreateNewRowTimekeeping(session, tempNote.SoPhutDiTre.ToString(), soPhutDiTre.Oid, tempNote.TimekeepingName.Oid,
-                   tempNote.Employee.Oid, index, ref strArr);
+                   tempNote.Employee.Oid, tempNote.Employee.Department.Oid, index, ref strArr);
                 CreateNewRowTimekeeping(session, tempNote.SoPhutVeSom.ToString(), soPhutVeSom.Oid, tempNote.TimekeepingName.Oid,
-                  tempNote.Employee.Oid, index, ref strArr);
+                  tempNote.Employee.Oid, tempNote.Employee.Department.Oid, index, ref strArr);
                 CreateNewRowTimekeeping(session, tempNote.TongSoGioLam.ToString(), tongThoiGianLam.Oid, tempNote.TimekeepingName.Oid,
-                  tempNote.Employee.Oid, index, ref strArr);
+                  tempNote.Employee.Oid, tempNote.Employee.Department.Oid, index, ref strArr);
                 CreateNewRowTimekeeping(session, tempNote.NgayCongThucTe.ToString(), ngayCongThucTe.Oid, tempNote.TimekeepingName.Oid,
-                  tempNote.Employee.Oid, index, ref strArr);
+                  tempNote.Employee.Oid, tempNote.Employee.Department.Oid, index, ref strArr);
                 CreateNewRowTimekeeping(session, tempNote.NgayTinhCong.ToString(), ngayTinhCong.Oid, tempNote.TimekeepingName.Oid,
-                  tempNote.Employee.Oid, index, ref strArr);
+                  tempNote.Employee.Oid, tempNote.Employee.Department.Oid, index, ref strArr);
 
                 
             }
@@ -293,5 +273,103 @@ namespace EasyHRM.Module.Controllers
             ((DevExpress.ExpressApp.ListView)View).CollectionSource.Criteria["Filter1"] = new BinaryOperator(
            "TimekeepingName.Oid", tkname.Oid, BinaryOperatorType.Equal);
         }
+
+
+        private void acCapNhatDuLieu_Execute(object sender, SimpleActionExecuteEventArgs e)
+        {
+            Timekeeping t = e.CurrentObject as Timekeeping;
+            double _SoGioLamCuaCa = 0;
+            TimeSpan tsValue = (t.ThoiGianRa - t.ThoiGianVao);
+
+            Parameter parameter;
+            using (IObjectSpace objNewSpace = Frame.Application.CreateObjectSpace())
+            {
+                XPCollection xpcPar = new XPCollection(((XPObjectSpace)objNewSpace).Session, typeof(Parameter));
+                parameter = xpcPar[0] as Parameter;
+            }
+
+
+            // 1. Cập nhật đi trể về sớm
+            DefaultValueTimekeeping value = ObjectSpace.FindObject<DefaultValueTimekeeping>(
+                new BinaryOperator("Shift", t.Shift));
+            if (value != null)
+            {
+                TimeSpan ts = t.ThoiGianVao - value.ThoiGianVao;
+                if (ts.TotalMinutes > 0)
+                {
+                    t.SoPhutDiTre = Math.Round(ts.TotalMinutes, 2);
+                }
+                ts = t.ThoiGianRa - value.ThoiGianRa;
+                if (ts.TotalMinutes < 0)
+                {
+                    t.SoPhutVeSom = Math.Round(-ts.TotalMinutes, 2);
+                }
+                _SoGioLamCuaCa = value.TongSoGioLam;
+            }
+
+            // 2. Cập nhật tổng số giờ làm 
+
+
+            // 3. Cập nhật ngày công thực tế, ngày tính công
+
+
+            // 4. Cập nhật tính giờ tăng ca
+
+            // Kiểm tra ngày chấm công có phải ngày lễ không
+            t.SoGioTangCaNL = 0;
+            t.SoGioTangCaNN = 0;
+            t.SoGioTangCaNNCaDem = 0;
+            t.SoGioTangCaNT = 0;
+            t.SoGioTangCaNTCaDem = 0;
+
+            Holiday holidayDate = ObjectSpace.FindObject<Holiday>(CriteriaOperator.And(new BinaryOperator(
+                "StartDate", t.Date, BinaryOperatorType.GreaterOrEqual), new BinaryOperator(
+                    "EndDate", t.Date, BinaryOperatorType.LessOrEqual)));
+            if (holidayDate != null)
+            {
+                t.SoGioTangCaNL = Math.Round(tsValue.TotalHours, 2);
+
+                t.NgayTinhCong = 0;
+            }
+            else
+            {
+                //
+                // Kiểm tra xem ngày đó có ca không nếu có ca thì là tăng ca ngày thường, không ca tăng ca ngày nghĩ.
+                //
+                if (t.Shift != null)
+                {
+                    if (_SoGioLamCuaCa != 0)
+                    {
+                        double d = tsValue.TotalHours - _SoGioLamCuaCa;
+                        if (d >= parameter.SoGioToiThieuTinhTangCa) //  Lớn hơn 15p thì mới tính tăng ca (0.25 giờ)
+                        {
+                            t.SoGioTangCaNT = Math.Round(d, 2);
+
+                            TimeSpan ts2 = t.ThoiGianRa - parameter.ThoiGianTinhCaDem;
+                            // Nếu giờ ra sau giờ ra tính ca đêm, thì mới tính ca đêm
+                            if (ts2.TotalHours >= parameter.SoGioToiThieuTinhTangCa)
+                            {
+                                t.SoGioTangCaNTCaDem = Math.Round(ts2.TotalHours, 2);
+                                t.SoGioTangCaNT = Math.Round((tsValue.TotalHours - ts2.TotalHours), 2);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    t.SoGioTangCaNN = Math.Round(tsValue.TotalHours, 2);
+                    TimeSpan ts2 = t.ThoiGianRa - parameter.ThoiGianTinhCaDem;
+                    // Nếu giờ ra sau giờ ra tính ca đêm, thì mới tính ca đêm
+                    if (ts2.TotalHours >= parameter.SoGioToiThieuTinhTangCa)
+                    {
+                        t.SoGioTangCaNNCaDem = Math.Round(ts2.TotalHours, 2);
+                        t.SoGioTangCaNN = Math.Round((tsValue.TotalHours - ts2.TotalHours), 2);
+                    }
+                }
+            }
+            t.Save();
+            ObjectSpace.CommitChanges();
+        }
+        
     }
 }

@@ -16,6 +16,7 @@ namespace EasyHRM.Module.BusinessObjects
 {
     [DefaultClassOptions]
 
+    [NavigationItem("Quản Lý Chấm Công")]
     public class Shift : BaseObject
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (http://documentation.devexpress.com/#Xaf/CustomDocument3146).
         public Shift(Session session)

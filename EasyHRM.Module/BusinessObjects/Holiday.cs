@@ -63,6 +63,13 @@ namespace EasyHRM.Module.BusinessObjects
         {
             get { return GetPropertyValue<HolidayTypes>("HolidayTypes"); }
             set { SetPropertyValue<HolidayTypes>("HolidayTypes", value); }
-        }      
+        }
+
+        [XafDisplayName("Nhân Viên")]
+        public Employee Employee
+        {
+            get { return GetPropertyValue<Employee>("Employee"); }
+            set { SetPropertyValue<Employee>("Employee", value); }
+        }     
     }
 }

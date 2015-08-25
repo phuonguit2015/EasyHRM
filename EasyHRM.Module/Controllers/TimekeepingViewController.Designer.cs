@@ -1,4 +1,4 @@
-namespace EasyHRM.Module.Controllers
+﻿namespace EasyHRM.Module.Controllers
 {
     partial class TimekeepingViewController
     {
@@ -32,6 +32,8 @@ namespace EasyHRM.Module.Controllers
             this.acImportFromExcel = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             this.ImportToTimekeepingMonth = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             this.acFilterByTimekeepingMonth = new DevExpress.ExpressApp.Actions.SingleChoiceAction(this.components);
+            this.acCapNhatDuLieu = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
+            this.MySimpleAction = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             // 
             // acImportFromExcel
             // 
@@ -60,6 +62,26 @@ namespace EasyHRM.Module.Controllers
             this.acFilterByTimekeepingMonth.ToolTip = null;
             this.acFilterByTimekeepingMonth.Execute += new DevExpress.ExpressApp.Actions.SingleChoiceActionExecuteEventHandler(this.acFilterByTimekeepingMonth_Execute);
             // 
+            // acCapNhatDuLieu
+            // 
+            this.acCapNhatDuLieu.Caption = "Cập Nhật Dữ Liệu";
+            this.acCapNhatDuLieu.Category = "MyCategory";
+            this.acCapNhatDuLieu.ConfirmationMessage = null;
+            this.acCapNhatDuLieu.Id = "acCapNhatDuLieu";
+            this.acCapNhatDuLieu.TargetObjectType = typeof(EasyHRM.Module.BusinessObjects.Timekeeping);
+            this.acCapNhatDuLieu.TargetViewType = DevExpress.ExpressApp.ViewType.DetailView;
+            this.acCapNhatDuLieu.ToolTip = null;
+            this.acCapNhatDuLieu.TypeOfView = typeof(DevExpress.ExpressApp.DetailView);
+            this.acCapNhatDuLieu.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.acCapNhatDuLieu_Execute);
+            // 
+            // MySimpleAction
+            // 
+            this.MySimpleAction.Caption = "My Simple Action";
+            this.MySimpleAction.Category = "MyCategory";
+            this.MySimpleAction.ConfirmationMessage = null;
+            this.MySimpleAction.Id = "MySimpleAction";
+            this.MySimpleAction.ToolTip = null;
+            // 
             // TimekeepingViewController
             // 
             this.TargetObjectType = typeof(EasyHRM.Module.BusinessObjects.Timekeeping);
@@ -73,6 +95,8 @@ namespace EasyHRM.Module.Controllers
         private DevExpress.ExpressApp.Actions.SimpleAction acImportFromExcel;
         private DevExpress.ExpressApp.Actions.SimpleAction ImportToTimekeepingMonth;
         private DevExpress.ExpressApp.Actions.SingleChoiceAction acFilterByTimekeepingMonth;
+        private DevExpress.ExpressApp.Actions.SimpleAction acCapNhatDuLieu;
+        private DevExpress.ExpressApp.Actions.SimpleAction MySimpleAction;
 
     }
 }
